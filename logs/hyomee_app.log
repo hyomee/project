@@ -1,0 +1,75 @@
+[hyomee] [2023-08-27 22:50:11.593] [main] INFO  com.hyomee.jpa.JpaApplication - Starting JpaApplication using Java 17.0.2 with PID 25928 (D:\PRJ\project\jpa\jpa\build\classes\java\main started by ASUS in D:\PRJ\project)
+[hyomee] [2023-08-27 22:50:11.597] [main] DEBUG com.hyomee.jpa.JpaApplication - Running with Spring Boot v3.1.3, Spring v6.0.11
+[hyomee] [2023-08-27 22:50:11.599] [main] INFO  com.hyomee.jpa.JpaApplication - The following 1 profile is active: "local"
+[hyomee] [2023-08-27 22:50:13.191] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[hyomee] [2023-08-27 22:50:13.327] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 116 ms. Found 1 JPA repository interfaces.
+[hyomee] [2023-08-27 22:50:14.806] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[hyomee] [2023-08-27 22:50:14.829] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[hyomee] [2023-08-27 22:50:14.836] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[hyomee] [2023-08-27 22:50:14.837] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+[hyomee] [2023-08-27 22:50:15.179] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[hyomee] [2023-08-27 22:50:15.184] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3464 ms
+[hyomee] [2023-08-27 22:50:15.243] [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class org.h2.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@63947c6b
+[hyomee] [2023-08-27 22:50:15.291] [main] DEBUG com.zaxxer.hikari.HikariConfig - pool-hyomee - configuration:
+[hyomee] [2023-08-27 22:50:15.299] [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+[hyomee] [2023-08-27 22:50:15.300] [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+[hyomee] [2023-08-27 22:50:15.301] [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+[hyomee] [2023-08-27 22:50:15.302] [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+[hyomee] [2023-08-27 22:50:15.303] [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery............."SELECT 1"
+[hyomee] [2023-08-27 22:50:15.304] [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+[hyomee] [2023-08-27 22:50:15.305] [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+[hyomee] [2023-08-27 22:50:15.305] [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+[hyomee] [2023-08-27 22:50:15.306] [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+[hyomee] [2023-08-27 22:50:15.307] [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+[hyomee] [2023-08-27 22:50:15.308] [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."org.h2.Driver"
+[hyomee] [2023-08-27 22:50:15.309] [main] DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+[hyomee] [2023-08-27 22:50:15.310] [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+[hyomee] [2023-08-27 22:50:15.310] [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+[hyomee] [2023-08-27 22:50:15.311] [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................300000
+[hyomee] [2023-08-27 22:50:15.311] [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+[hyomee] [2023-08-27 22:50:15.312] [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+[hyomee] [2023-08-27 22:50:15.313] [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:h2:file:./db/demodb
+[hyomee] [2023-08-27 22:50:15.314] [main] DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+[hyomee] [2023-08-27 22:50:15.315] [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........300000
+[hyomee] [2023-08-27 22:50:15.316] [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................600000
+[hyomee] [2023-08-27 22:50:15.317] [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................50
+[hyomee] [2023-08-27 22:50:15.317] [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+[hyomee] [2023-08-27 22:50:15.318] [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+[hyomee] [2023-08-27 22:50:15.318] [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+[hyomee] [2023-08-27 22:50:15.319] [main] DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+[hyomee] [2023-08-27 22:50:15.319] [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"pool-hyomee"
+[hyomee] [2023-08-27 22:50:15.320] [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+[hyomee] [2023-08-27 22:50:15.320] [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+[hyomee] [2023-08-27 22:50:15.321] [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+[hyomee] [2023-08-27 22:50:15.322] [main] DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+[hyomee] [2023-08-27 22:50:15.322] [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+[hyomee] [2023-08-27 22:50:15.323] [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+[hyomee] [2023-08-27 22:50:15.323] [main] DEBUG com.zaxxer.hikari.HikariConfig - username........................"sa"
+[hyomee] [2023-08-27 22:50:15.323] [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+[hyomee] [2023-08-27 22:50:15.324] [main] INFO  com.zaxxer.hikari.HikariDataSource - pool-hyomee - Starting...
+[hyomee] [2023-08-27 22:50:16.170] [main] INFO  com.zaxxer.hikari.pool.HikariPool - pool-hyomee - Added connection conn0: url=jdbc:h2:file:./db/demodb user=SA
+[hyomee] [2023-08-27 22:50:16.174] [main] INFO  com.zaxxer.hikari.HikariDataSource - pool-hyomee - Start completed.
+[hyomee] [2023-08-27 22:50:16.211] [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./db/demodb'
+[hyomee] [2023-08-27 22:50:16.640] [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[hyomee] [2023-08-27 22:50:16.860] [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.7.Final
+[hyomee] [2023-08-27 22:50:16.864] [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+[hyomee] [2023-08-27 22:50:17.211] [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+[hyomee] [2023-08-27 22:50:17.581] [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[hyomee] [2023-08-27 22:50:18.094] [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+[hyomee] [2023-08-27 22:50:19.586] [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[hyomee] [2023-08-27 22:50:19.693] [main] DEBUG org.hibernate.SQL - 
+    [34mcreate[0m [34mtable[0m tb_demo (
+        id [34minteger[0m [34mnot[0m [34mnull[0m,
+        content [34mvarchar[0m(255),
+        title [34mvarchar[0m(255),
+        [34mprimary[0m [34mkey[0m (id)
+    )
+[hyomee] [2023-08-27 22:50:19.724] [main] DEBUG org.hibernate.SQL - 
+    [34mcreate[0m [34msequence[0m tb_demo_seq [34mstart[0m [34mwith[0m 1 [34mincrement[0m [34mby[0m 50
+[hyomee] [2023-08-27 22:50:19.733] [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[hyomee] [2023-08-27 22:50:21.436] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[hyomee] [2023-08-27 22:50:21.495] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[hyomee] [2023-08-27 22:50:21.513] [main] INFO  com.hyomee.jpa.JpaApplication - Started JpaApplication in 11.593 seconds (process running for 14.689)
+[hyomee] [2023-08-27 22:50:47.861] [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[hyomee] [2023-08-27 22:50:47.863] [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - pool-hyomee - Shutdown initiated...
+[hyomee] [2023-08-27 22:50:47.867] [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - pool-hyomee - Shutdown completed.
