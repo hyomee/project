@@ -7,15 +7,17 @@
         <option name="delegatedBuild" value="false" />
         <option name="testRunner" value="PLATFORM" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="17 (3)" />
+        <option name="gradleHome" value="C:/sdk/gradle/gradle-7.4" />
+        <option name="gradleJvm" value="MS 17.0.8" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/project-core" />
             <option value="$PROJECT_DIR$/project-es" />
             <option value="$PROJECT_DIR$/project-jpa" />
-            <option value="$PROJECT_DIR$/project-jpaservice" />
             <option value="$PROJECT_DIR$/project-scheduler" />
+            <option value="$PROJECT_DIR$/project-serviceJpa" />
+            <option value="$PROJECT_DIR$/project-serviceScheduler" />
           </set>
         </option>
       </GradleProjectSettings>

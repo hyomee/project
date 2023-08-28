@@ -10,5 +10,6 @@ include 'project-core'
 include 'project-jpa'
 include 'project-es'
 include 'project-scheduler'
-include 'project-jpaservice'
+include 'project-serviceJpa'
+include 'project-serviceScheduler'
 

@@ -1,4 +1,4 @@
-package com.hyomee.core.config.scheduler;
+package com.hyomee.scheduler.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

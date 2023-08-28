@@ -11,6 +11,7 @@ import java.util.Objects;
 import java.util.Set;
 
 public class ConvertUtils {
+    @SuppressWarnings("unchecked")
     public static <T> Map<String, String> convertToMap(T source) {
 
         Map<String, String> result = new HashMap<>();
