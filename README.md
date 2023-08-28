@@ -5,3 +5,6 @@
 - vue 3
 
   
+JDK : 
+- https://aka.ms/download-jdk/microsoft-jdk-17.0.8-windows-x64.zip
+- https://aka.ms/download-jdk/microsoft-jdk-17.0.8-windows-x64.msi
