@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: hyomee
+  config:
+    import:
+      - classpath:/config/errTrace.yml
+  messages:
+    basename: message/normal,  essage/exception
+    encoding: UTF-8

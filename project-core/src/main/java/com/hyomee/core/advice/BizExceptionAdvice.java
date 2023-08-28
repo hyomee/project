@@ -27,10 +27,10 @@ import java.text.MessageFormat;
 @Order(Ordered.LOWEST_PRECEDENCE)
 public class BizExceptionAdvice {
 
-  @Value("${user.error.fillInStackTrace:false}")
+  @Value("${error.trace.fillInStackTrace:false}")
   private boolean fillInStackTrace;
 
-  @Value("${user.error.printStackTrace:false}")
+  @Value("${error.trace.printStackTrace:false}")
   private boolean printStackTrace;
 
   private final MessageSource messageSource;
