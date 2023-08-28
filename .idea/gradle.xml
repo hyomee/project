@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/project-core" />
+            <option value="$PROJECT_DIR$/project-es" />
             <option value="$PROJECT_DIR$/project-jpa" />
           </set>
         </option>
