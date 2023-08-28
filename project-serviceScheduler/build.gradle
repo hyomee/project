@@ -1,0 +1,58 @@
+plugins {
+    id 'java'
+    id 'maven-publish' // maven 사용
+}
+
+group = 'org.hyomee'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+
+tasks.named("jar") {
+    archiveClassifier = ''
+}
+
+tasks.named("bootJar") {
+//        archiveClassifier = 'boot'
+    mainClass = 'com.hyomee.JpaServiceApplication'
+    manifest {
+        attributes 'Start-Class': 'com.hyomee.JpaServiceApplication'
+    }
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = 'com.hyomee'
+            artifactId 'hyomee-schedulerService-lib'
+            version '1.0'
+            artifact tasks.named("jar")
+        }
+
+        bootJava(MavenPublication) {
+            groupId = 'com.hyomee'
+            artifactId 'hyomee-schedulerService'
+            version '1.0'
+            artifact tasks.named("bootJar")
+        }
+
+//            repositories {
+//                maven {
+//                    url 'https://repo.example.com'
+//                }
+//            }
+    }
+}
+
+dependencies {
+    implementation project(':project-core')
+    implementation project(':project-scheduler')
+}
+
+test {
+    useJUnitPlatform()
+}

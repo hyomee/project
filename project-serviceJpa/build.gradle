@@ -1,0 +1,101 @@
+plugins {
+    id 'java'
+    id 'maven-publish' // maven 사용
+}
+
+group = 'com.hyomee'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+
+tasks.named("bootJar") {
+//        archiveClassifier = 'boot'
+    mainClass = 'com.hyomee.service.jpa.JpaServiceApplication'
+    manifest {
+        attributes 'Start-Class': 'com.hyomee.service.jpa.JpaServiceApplication'
+    }
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = 'com.hyomee'
+            artifactId 'hyomee-jpaservicejar'
+            version '1.0'
+            from components.java
+            // artifact tasks.named("jar")
+        }
+
+        bootJava(MavenPublication) {
+            groupId = 'com.hyomee'
+            artifactId 'hyomee-jpaservice'
+            version '1.0'
+            artifact tasks.named("bootJar")
+        }
+//            repositories {
+//                maven {
+//                    url 'https://repo.example.com'
+//                }
+//            }
+    }
+}
+
+
+dependencies {
+
+
+    implementation project(':project-core')
+    implementation project(':project-jpa')
+
+    // runtimeOnly 'com.h2database:h2:2.1.214'
+    runtimeOnly 'com.h2database:h2:2.1.214'
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:3.0.4'
+    // QueryDSL Implementation
+    implementation 'com.querydsl:querydsl-jpa:5.0.0:jakarta'
+
+    annotationProcessor "com.querydsl:querydsl-apt:5.0.0:jakarta"
+    annotationProcessor 'jakarta.annotation:jakarta.annotation-api:2.1.1'
+    annotationProcessor 'jakarta.persistence:jakarta.persistence-api:3.1.0'
+
+    /**********************************************
+     * 생산성
+     **********************************************/
+    compileOnly 'org.projectlombok:lombok:1.18.28'
+    annotationProcessor 'org.projectlombok:lombok:1.18.28'
+
+    implementation 'org.mapstruct:mapstruct:1.5.5.Final'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+/**
+ * QueryDSL Build Options
+ */
+def querydslDir = "$buildDir/generated/querydsl"
+
+
+sourceSets {
+    main.java.srcDirs += [ querydslDir ]
+}
+
+
+tasks.withType(JavaCompile).configureEach {
+    options.getGeneratedSourceOutputDirectory().set(file(querydslDir))
+}
+
+clean.doLast {
+    file(querydslDir).deleteDir()
+}
+
+
+test {
+    exclude '**/*'
+}
