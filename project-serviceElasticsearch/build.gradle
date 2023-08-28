@@ -1,0 +1,64 @@
+plugins {
+    id 'java'
+    id 'maven-publish' // maven 사용
+}
+
+group = 'org.hyomee'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+tasks.named("bootJar") {
+//        archiveClassifier = 'boot'
+    mainClass = 'com.hyomee.ElasticsearchServiceApplication'
+    manifest {
+        attributes 'Start-Class': 'com.hyomee.ElasticsearchServiceApplication'
+    }
+}
+
+publishing {
+    publications {
+
+        bootJava(MavenPublication) {
+            groupId = 'com.hyomee'
+            artifactId 'hyomee-serviceElasticsearch'
+            version '1.0'
+            artifact tasks.named("bootJar")
+        }
+
+//            repositories {
+//                maven {
+//                    url 'https://repo.example.com'
+//                }
+//            }
+    }
+}
+
+dependencies {
+    implementation project(':project-core')
+    implementation project(':project-jpa')
+    implementation project(':project-es')
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-elasticsearch:3.0.4'
+
+    // QueryDSL Implementation
+    implementation 'com.querydsl:querydsl-jpa:5.0.0:jakarta'
+
+    annotationProcessor "com.querydsl:querydsl-apt:5.0.0:jakarta"
+    annotationProcessor 'jakarta.annotation:jakarta.annotation-api:2.1.1'
+    annotationProcessor 'jakarta.persistence:jakarta.persistence-api:3.1.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+def generatedDir = 'src/main/generated'
+def generatedOutDir = 'out'
+clean {
+    delete file (generatedDir)
+    delete file (generatedOutDir)
+}

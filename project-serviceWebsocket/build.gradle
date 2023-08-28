@@ -1,0 +1,65 @@
+plugins {
+    id 'java'
+    id 'maven-publish' // maven 사용
+}
+
+group = 'com.hyomee'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+
+tasks.named("bootJar") {
+//        archiveClassifier = 'boot'
+    mainClass = 'com.hyomee.WebsocketServiceApplication'
+    manifest {
+        attributes 'Start-Class': 'com.hyomee.WebsocketServiceApplication'
+    }
+}
+
+publishing {
+    publications {
+
+
+        bootJava(MavenPublication) {
+            groupId = 'com.hyomee'
+            artifactId 'hyomee-websocketService'
+            version '1.0'
+            artifact tasks.named("bootJar")
+        }
+//            repositories {
+//                maven {
+//                    url 'https://repo.example.com'
+//                }
+//            }
+    }
+}
+
+
+dependencies {
+
+
+    implementation project(':project-core')
+
+    implementation 'org.springframework.boot:spring-boot-starter-websocket:3.1.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+
+// Querydsl 설정부
+def generatedDir = 'src/main/generated'
+def generatedOutDir = 'out'
+clean {
+    delete file (generatedDir)
+    delete file (generatedOutDir)
+}
+
+test {
+    exclude '**/*'
+}
