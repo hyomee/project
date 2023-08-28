@@ -9,5 +9,6 @@ rootProject.name = "project"
 include 'project-core'
 include 'project-jpa'
 include 'project-es'
+include 'project-scheduler'
 include 'project-jpaservice'
 

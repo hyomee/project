@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/project-es" />
             <option value="$PROJECT_DIR$/project-jpa" />
             <option value="$PROJECT_DIR$/project-jpaservice" />
+            <option value="$PROJECT_DIR$/project-scheduler" />
           </set>
         </option>
       </GradleProjectSettings>

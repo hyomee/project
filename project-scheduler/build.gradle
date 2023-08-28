@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+    id 'maven-publish' // maven 사용
+}
+
+group = 'org.hyomee'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+
+tasks.named("jar") {
+    archiveClassifier = ''
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = 'com.hyomee'
+            artifactId 'hyomee-scheduler'
+            version '1.0'
+            artifact tasks.named("jar")
+        }
+
+//            repositories {
+//                maven {
+//                    url 'https://repo.example.com'
+//                }
+//            }
+    }
+}
+
+dependencies {
+    implementation project(':project-core')
+
+}
+
+test {
+    useJUnitPlatform()
+}

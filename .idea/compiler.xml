@@ -32,6 +32,7 @@
         <module name="project.project-jpa.test" />
         <module name="project.project-core.test" />
         <module name="project.project-jpaservice.test" />
+        <module name="project.project-scheduler.test" />
       </profile>
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />
@@ -41,6 +42,7 @@
         </processorPath>
         <module name="project.project-core.main" />
         <module name="project.project-es.main" />
+        <module name="project.project-scheduler.main" />
       </profile>
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />

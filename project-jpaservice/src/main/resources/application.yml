@@ -5,7 +5,7 @@ spring:
     active: local
   config:
     import:
-      - optional:/config/custom/custom.yml
+      - optional:classpath:/config/custom/custom.yml
   messages:
     basename: message/normal,  essage/exception
     encoding: UTF-8

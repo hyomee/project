@@ -1,14 +1,12 @@
 package com.hyomee.core.utils;
 
 import com.google.gson.Gson;
+import com.hyomee.core.exception.BizException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.Reader;
-import java.io.UnsupportedEncodingException;
+import java.io.*;
 
 @RequiredArgsConstructor
 @Component
@@ -30,5 +28,18 @@ public class JsonFileReadUtils {
 
         return (T) new Gson().fromJson(reader, className);
 
+    }
+
+    public static Reader fileLoad(String dirtory, String filename) {
+        // Reader reader = null;
+        BufferedReader reader = null;
+        try {
+            String filepath = dirtory + filename + ".json";
+            reader = new BufferedReader(new InputStreamReader(new FileInputStream(filepath),"UTF-8"));
+            // reader = new FileReader( this.tourlistDir + filename + ".json");
+        } catch (FileNotFoundException | UnsupportedEncodingException e) {
+            throw new BizException(filename + " 파일이 없습니다.");
+        }
+        return reader;
     }
 }
