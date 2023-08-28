@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: hyomee
+  profiles:
+    active: local
+  config:
+    import:
+      - classpath:/config/custom/custom.yml
+      - classpath:/config/custom/el.yml
+  messages:
+    basename: message/message,  essage/exception
+    encoding: UTF-8
+  main:
+    allow-bean-definition-overriding: true
+
+
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    root: info
+#    org:
+#      hibernate:
+#        SQL: debug
+#        type:
+#          descriptor:
+#            sql: trace
+
+
+
+

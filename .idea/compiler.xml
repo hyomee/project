@@ -31,6 +31,7 @@
         </processorPath>
         <module name="project.project-core.main" />
         <module name="project.project-serviceScheduler.main" />
+        <module name="project.project-serviceWebsocket.main" />
         <module name="project.project-scheduler.main" />
         <module name="project.project-es.main" />
       </profile>
@@ -39,10 +40,12 @@
         <processorPath useClasspath="false">
           <entry name="C:/sdk/gradle/gradle-7.4/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.26/8f8cf0372abf564913e9796623aac4c8ea44025a/lombok-1.18.26.jar" />
         </processorPath>
+        <module name="project.project-serviceWebsocket.test" />
         <module name="project.project-es.test" />
         <module name="project.project-jpa.test" />
         <module name="project.project-serviceJpa.test" />
         <module name="project.project-core.test" />
+        <module name="project.project-serviceElasticsearch.test" />
         <module name="project.project-serviceScheduler.test" />
         <module name="project.project-scheduler.test" />
       </profile>
@@ -64,6 +67,7 @@
         </processorPath>
         <module name="project.project-serviceJpa.main" />
         <module name="project.project-jpa.main" />
+        <module name="project.project-serviceElasticsearch.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17" />

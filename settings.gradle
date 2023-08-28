@@ -12,4 +12,6 @@ include 'project-es'
 include 'project-scheduler'
 include 'project-serviceJpa'
 include 'project-serviceScheduler'
+include 'project-serviceElasticsearch'
+include 'project-serviceWebsocket'
 

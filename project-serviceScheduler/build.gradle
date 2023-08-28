@@ -56,3 +56,10 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+def generatedDir = 'src/main/generated'
+def generatedOutDir = 'out'
+clean {
+    delete file (generatedDir)
+    delete file (generatedOutDir)
+}

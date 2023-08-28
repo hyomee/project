@@ -16,8 +16,10 @@
             <option value="$PROJECT_DIR$/project-es" />
             <option value="$PROJECT_DIR$/project-jpa" />
             <option value="$PROJECT_DIR$/project-scheduler" />
+            <option value="$PROJECT_DIR$/project-serviceElasticsearch" />
             <option value="$PROJECT_DIR$/project-serviceJpa" />
             <option value="$PROJECT_DIR$/project-serviceScheduler" />
+            <option value="$PROJECT_DIR$/project-serviceWebsocket" />
           </set>
         </option>
       </GradleProjectSettings>

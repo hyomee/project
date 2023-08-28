@@ -8,7 +8,7 @@ import javax.annotation.processing.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-08-29T00:08:58+0900",
+    date = "2023-08-29T01:07:48+0900",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 17.0.8 (Microsoft)"
 )
 public class WorkMapperImpl implements WorkMapper {
