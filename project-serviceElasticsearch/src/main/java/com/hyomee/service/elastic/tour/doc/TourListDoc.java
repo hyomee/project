@@ -18,13 +18,17 @@ public class TourListDoc {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long tourListId;
+    private Long id;
+
+    private String tourListId;
 
     @Field(type = FieldType.Text)
     private String contentid;
 
-    @Field(type = FieldType.Text)
+    @Field(type = FieldType.Text, analyzer = "nori")
     private String addr1;
+
+    @Field(type = FieldType.Text, analyzer = "nori")
     private String addr2;
     private String areacode;
     private String booktour;
@@ -42,11 +46,13 @@ public class TourListDoc {
     private String modifiedtime;
     private String sigungucode;
     private String tel;
-    @Field(type = FieldType.Text)
+
+    @Field(type = FieldType.Text, analyzer = "nori")
     private String title;
-    @Field(type = FieldType.Text)
+
     private String zipcode;
     private String contentid2;
-    @Field(type = FieldType.Text)
+
+    @Field(type = FieldType.Text, analyzer = "nori")
     private String overview;
 }

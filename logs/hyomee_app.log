@@ -66,3 +66,226 @@
 [hyomee] [2023-08-29 00:09:31.462] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
 [hyomee] [2023-08-29 00:09:31.509] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
 [hyomee] [2023-08-29 00:09:31.525] [main] INFO  com.hyomee.JpaServiceApplication - Started JpaServiceApplication in 16.656 seconds (process running for 20.165)
+[hyomee] [2023-08-29 01:08:15.658] [main] INFO  com.hyomee.JpaServiceApplication - Starting JpaServiceApplication using Java 17.0.8 with PID 7088 (D:\PRJ\project\project-serviceJpa\out\production\classes started by ASUS in D:\PRJ\project)
+[hyomee] [2023-08-29 01:08:15.668] [main] DEBUG com.hyomee.JpaServiceApplication - Running with Spring Boot v3.1.3, Spring v6.0.11
+[hyomee] [2023-08-29 01:08:15.670] [main] INFO  com.hyomee.JpaServiceApplication - The following 1 profile is active: "local"
+[hyomee] [2023-08-29 01:08:19.650] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[hyomee] [2023-08-29 01:08:20.017] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 333 ms. Found 6 JPA repository interfaces.
+[hyomee] [2023-08-29 01:08:22.106] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[hyomee] [2023-08-29 01:08:22.129] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[hyomee] [2023-08-29 01:08:22.137] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[hyomee] [2023-08-29 01:08:22.138] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+[hyomee] [2023-08-29 01:08:22.453] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[hyomee] [2023-08-29 01:08:22.457] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6628 ms
+[hyomee] [2023-08-29 01:08:22.500] [main] DEBUG com.zaxxer.hikari.HikariConfig - Driver class org.h2.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@63947c6b
+[hyomee] [2023-08-29 01:08:22.542] [main] DEBUG com.zaxxer.hikari.HikariConfig - pool-hyomee - configuration:
+[hyomee] [2023-08-29 01:08:22.556] [main] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+[hyomee] [2023-08-29 01:08:22.557] [main] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+[hyomee] [2023-08-29 01:08:22.557] [main] DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+[hyomee] [2023-08-29 01:08:22.558] [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+[hyomee] [2023-08-29 01:08:22.559] [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery............."SELECT 1"
+[hyomee] [2023-08-29 01:08:22.560] [main] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+[hyomee] [2023-08-29 01:08:22.561] [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+[hyomee] [2023-08-29 01:08:22.561] [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+[hyomee] [2023-08-29 01:08:22.561] [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+[hyomee] [2023-08-29 01:08:22.562] [main] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+[hyomee] [2023-08-29 01:08:22.563] [main] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."org.h2.Driver"
+[hyomee] [2023-08-29 01:08:22.563] [main] DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+[hyomee] [2023-08-29 01:08:22.564] [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+[hyomee] [2023-08-29 01:08:22.564] [main] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+[hyomee] [2023-08-29 01:08:22.565] [main] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................300000
+[hyomee] [2023-08-29 01:08:22.566] [main] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+[hyomee] [2023-08-29 01:08:22.567] [main] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+[hyomee] [2023-08-29 01:08:22.568] [main] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:h2:file:./db/demodb
+[hyomee] [2023-08-29 01:08:22.568] [main] DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+[hyomee] [2023-08-29 01:08:22.569] [main] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........300000
+[hyomee] [2023-08-29 01:08:22.569] [main] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................600000
+[hyomee] [2023-08-29 01:08:22.570] [main] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................50
+[hyomee] [2023-08-29 01:08:22.570] [main] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+[hyomee] [2023-08-29 01:08:22.571] [main] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+[hyomee] [2023-08-29 01:08:22.573] [main] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+[hyomee] [2023-08-29 01:08:22.573] [main] DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+[hyomee] [2023-08-29 01:08:22.574] [main] DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"pool-hyomee"
+[hyomee] [2023-08-29 01:08:22.574] [main] DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+[hyomee] [2023-08-29 01:08:22.575] [main] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+[hyomee] [2023-08-29 01:08:22.575] [main] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+[hyomee] [2023-08-29 01:08:22.576] [main] DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+[hyomee] [2023-08-29 01:08:22.576] [main] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+[hyomee] [2023-08-29 01:08:22.576] [main] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+[hyomee] [2023-08-29 01:08:22.576] [main] DEBUG com.zaxxer.hikari.HikariConfig - username........................"sa"
+[hyomee] [2023-08-29 01:08:22.577] [main] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+[hyomee] [2023-08-29 01:08:22.577] [main] INFO  com.zaxxer.hikari.HikariDataSource - pool-hyomee - Starting...
+[hyomee] [2023-08-29 01:08:23.657] [main] INFO  com.zaxxer.hikari.pool.HikariPool - pool-hyomee - Added connection conn0: url=jdbc:h2:file:./db/demodb user=SA
+[hyomee] [2023-08-29 01:08:23.665] [main] INFO  com.zaxxer.hikari.HikariDataSource - pool-hyomee - Start completed.
+[hyomee] [2023-08-29 01:08:23.709] [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./db/demodb'
+[hyomee] [2023-08-29 01:08:24.534] [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[hyomee] [2023-08-29 01:08:24.824] [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.7.Final
+[hyomee] [2023-08-29 01:08:24.833] [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+[hyomee] [2023-08-29 01:08:25.823] [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+[hyomee] [2023-08-29 01:08:26.488] [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[hyomee] [2023-08-29 01:08:27.371] [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+[hyomee] [2023-08-29 01:08:28.943] [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[hyomee] [2023-08-29 01:08:28.999] [main] DEBUG org.hibernate.SQL - 
+    [34malter[0m [34mtable[0m [34mif[0m [34mexists[0m tb_planner 
+       [34malter[0m [34mcolumn[0m regdate [34mset[0m data type [34mtimestamp[0m(6)
+[hyomee] [2023-08-29 01:08:29.006] [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[hyomee] [2023-08-29 01:08:29.454] [main] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hyomee.service.demo.repository.DemoRepository
+[hyomee] [2023-08-29 01:08:29.778] [main] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.hyomee.service.tour.repository.TourlistRepository
+[hyomee] [2023-08-29 01:08:30.665] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[hyomee] [2023-08-29 01:08:30.710] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[hyomee] [2023-08-29 01:08:30.749] [main] INFO  com.hyomee.JpaServiceApplication - Started JpaServiceApplication in 17.514 seconds (process running for 28.247)
+[hyomee] [2023-08-29 01:08:39.518] [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+[hyomee] [2023-08-29 01:08:39.521] [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - pool-hyomee - Shutdown initiated...
+[hyomee] [2023-08-29 01:08:39.523] [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - pool-hyomee - Shutdown completed.
+[hyomee] [2023-08-29 22:56:20.244] [main] INFO  c.h.ElasticsearchServiceApplication - Starting ElasticsearchServiceApplication using Java 17.0.8 with PID 17824 (D:\PRJ\project\project-serviceElasticsearch\out\production\classes started by ASUS in D:\PRJ\project)
+[hyomee] [2023-08-29 22:56:20.282] [main] DEBUG c.h.ElasticsearchServiceApplication - Running with Spring Boot v3.1.3, Spring v6.0.11
+[hyomee] [2023-08-29 22:56:20.284] [main] INFO  c.h.ElasticsearchServiceApplication - The following 1 profile is active: "local"
+[hyomee] [2023-08-29 22:56:24.306] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+[hyomee] [2023-08-29 22:56:24.316] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+[hyomee] [2023-08-29 22:56:24.610] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 278 ms. Found 1 Elasticsearch repository interfaces.
+[hyomee] [2023-08-29 22:56:24.631] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+[hyomee] [2023-08-29 22:56:24.633] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+[hyomee] [2023-08-29 22:56:24.681] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 0 Reactive Elasticsearch repository interfaces.
+[hyomee] [2023-08-29 22:56:24.721] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+[hyomee] [2023-08-29 22:56:24.725] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[hyomee] [2023-08-29 22:56:24.786] [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.hyomee.service.elastic.tour.repository.TourListDocRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+[hyomee] [2023-08-29 22:56:24.787] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 48 ms. Found 0 JPA repository interfaces.
+[hyomee] [2023-08-29 22:56:28.547] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[hyomee] [2023-08-29 22:56:28.594] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[hyomee] [2023-08-29 22:56:28.607] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[hyomee] [2023-08-29 22:56:28.610] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+[hyomee] [2023-08-29 22:56:29.530] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[hyomee] [2023-08-29 22:56:29.535] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 9048 ms
+[hyomee] [2023-08-29 22:56:29.887] [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+[hyomee] [2023-08-29 22:56:29.897] [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+[hyomee] [2023-08-29 22:56:29.952] [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[hyomee] [2023-08-29 22:56:30.110] [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (the profiles local are currently active).
+
+[hyomee] [2023-08-29 22:58:07.929] [main] INFO  c.h.ElasticsearchServiceApplication - Starting ElasticsearchServiceApplication using Java 17.0.8 with PID 29832 (D:\PRJ\project\project-serviceElasticsearch\out\production\classes started by ASUS in D:\PRJ\project)
+[hyomee] [2023-08-29 22:58:07.934] [main] DEBUG c.h.ElasticsearchServiceApplication - Running with Spring Boot v3.1.3, Spring v6.0.11
+[hyomee] [2023-08-29 22:58:07.937] [main] INFO  c.h.ElasticsearchServiceApplication - The following 1 profile is active: "local"
+[hyomee] [2023-08-29 22:58:11.893] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+[hyomee] [2023-08-29 22:58:11.902] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+[hyomee] [2023-08-29 22:58:12.181] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 257 ms. Found 1 Elasticsearch repository interfaces.
+[hyomee] [2023-08-29 22:58:12.201] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+[hyomee] [2023-08-29 22:58:12.202] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+[hyomee] [2023-08-29 22:58:12.241] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 36 ms. Found 0 Reactive Elasticsearch repository interfaces.
+[hyomee] [2023-08-29 22:58:12.269] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+[hyomee] [2023-08-29 22:58:12.274] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[hyomee] [2023-08-29 22:58:12.336] [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.hyomee.service.elastic.tour.repository.TourListDocRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+[hyomee] [2023-08-29 22:58:12.337] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 0 JPA repository interfaces.
+[hyomee] [2023-08-29 22:58:14.615] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[hyomee] [2023-08-29 22:58:14.640] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[hyomee] [2023-08-29 22:58:14.646] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[hyomee] [2023-08-29 22:58:14.647] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+[hyomee] [2023-08-29 22:58:14.961] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[hyomee] [2023-08-29 22:58:14.964] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6872 ms
+[hyomee] [2023-08-29 22:58:15.169] [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+[hyomee] [2023-08-29 22:58:15.177] [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+[hyomee] [2023-08-29 22:58:15.230] [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[hyomee] [2023-08-29 22:58:15.294] [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (the profiles local are currently active).
+
+[hyomee] [2023-08-29 23:00:07.514] [main] INFO  c.h.ElasticsearchServiceApplication - Starting ElasticsearchServiceApplication using Java 17.0.8 with PID 26612 (D:\PRJ\project\project-serviceElasticsearch\out\production\classes started by ASUS in D:\PRJ\project)
+[hyomee] [2023-08-29 23:00:07.550] [main] DEBUG c.h.ElasticsearchServiceApplication - Running with Spring Boot v3.1.3, Spring v6.0.11
+[hyomee] [2023-08-29 23:00:07.552] [main] INFO  c.h.ElasticsearchServiceApplication - The following 1 profile is active: "local"
+[hyomee] [2023-08-29 23:00:13.396] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+[hyomee] [2023-08-29 23:00:13.412] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+[hyomee] [2023-08-29 23:00:13.943] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 492 ms. Found 1 Elasticsearch repository interfaces.
+[hyomee] [2023-08-29 23:00:13.975] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+[hyomee] [2023-08-29 23:00:13.979] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+[hyomee] [2023-08-29 23:00:14.061] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 80 ms. Found 0 Reactive Elasticsearch repository interfaces.
+[hyomee] [2023-08-29 23:00:14.098] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+[hyomee] [2023-08-29 23:00:14.102] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[hyomee] [2023-08-29 23:00:14.185] [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.hyomee.service.elastic.tour.repository.TourListDocRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+[hyomee] [2023-08-29 23:00:14.186] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 65 ms. Found 0 JPA repository interfaces.
+[hyomee] [2023-08-29 23:00:17.195] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[hyomee] [2023-08-29 23:00:17.223] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[hyomee] [2023-08-29 23:00:17.229] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[hyomee] [2023-08-29 23:00:17.229] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+[hyomee] [2023-08-29 23:00:17.706] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[hyomee] [2023-08-29 23:00:17.713] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 9981 ms
+[hyomee] [2023-08-29 23:00:18.003] [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+[hyomee] [2023-08-29 23:00:18.013] [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+[hyomee] [2023-08-29 23:00:18.063] [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[hyomee] [2023-08-29 23:00:18.144] [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (the profiles local are currently active).
+
+[hyomee] [2023-08-29 23:05:43.311] [main] INFO  c.h.ElasticsearchServiceApplication - Starting ElasticsearchServiceApplication using Java 17.0.8 with PID 1348 (D:\PRJ\project\project-serviceElasticsearch\out\production\classes started by ASUS in D:\PRJ\project)
+[hyomee] [2023-08-29 23:05:43.336] [main] DEBUG c.h.ElasticsearchServiceApplication - Running with Spring Boot v3.1.3, Spring v6.0.11
+[hyomee] [2023-08-29 23:05:43.338] [main] INFO  c.h.ElasticsearchServiceApplication - The following 1 profile is active: "local"
+[hyomee] [2023-08-29 23:05:45.328] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+[hyomee] [2023-08-29 23:05:45.537] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 196 ms. Found 1 Elasticsearch repository interfaces.
+[hyomee] [2023-08-29 23:05:45.557] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+[hyomee] [2023-08-29 23:05:45.587] [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 0 Reactive Elasticsearch repository interfaces.
+[hyomee] [2023-08-29 23:05:47.254] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[hyomee] [2023-08-29 23:05:47.277] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[hyomee] [2023-08-29 23:05:47.284] [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[hyomee] [2023-08-29 23:05:47.285] [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+[hyomee] [2023-08-29 23:05:47.623] [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[hyomee] [2023-08-29 23:05:47.627] [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4120 ms
+[hyomee] [2023-08-29 23:05:49.403] [main] TRACE o.s.data.elasticsearch.client.WIRE - [79be91eb] Sending request
+HEAD /tourlist
+Parameters: 
+Headers: [User-Agent: elastic-java/8.7.1 (Java/17.0.8), Accept: application/vnd.elasticsearch+json; compatible-with=8, Content-Type: application/vnd.elasticsearch+json; compatible-with=8, X-SpringDataElasticsearch-Client: imperative, X-Elastic-Client-Meta: es=8.7.1,jv=17,hl=2,t=8.7.1,hc=4.1.5, Authorization: *****, Host: 172.19.164.132:9200, Connection: Keep-Alive]
+[hyomee] [2023-08-29 23:05:49.967] [I/O dispatcher 1] TRACE o.s.data.elasticsearch.client.WIRE - [79be91eb] Received response: 200
+[X-elastic-product: Elasticsearch, content-type: application/vnd.elasticsearch+json;compatible-with=8, Transfer-Encoding: chunked]
+[hyomee] [2023-08-29 23:05:50.503] [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+[hyomee] [2023-08-29 23:05:50.759] [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[hyomee] [2023-08-29 23:05:50.784] [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[hyomee] [2023-08-29 23:05:50.797] [main] INFO  c.h.ElasticsearchServiceApplication - Started ElasticsearchServiceApplication in 9.564 seconds (process running for 13.095)
