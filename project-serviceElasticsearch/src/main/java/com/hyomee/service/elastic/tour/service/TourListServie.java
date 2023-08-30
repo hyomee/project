@@ -6,6 +6,8 @@ import com.hyomee.service.elastic.tour.mapper.EcMapper;
 import com.hyomee.service.elastic.tour.repository.TourListDocRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.LinkedList;
@@ -19,22 +21,27 @@ public class TourListServie {
 
     private final TourListDocRepository tourListDocRepository;
 
-    public List<TourListEcDTO> getTourListByTitleEq(String title) {
-
+    public List<TourListEcDTO> getTourListByTitle(String title) {
         List<TourListDoc>  tourListDocs = tourListDocRepository.findByTitle(title);
-
         return  EcMapper.INSTANCE.toTourListEcDTOs(tourListDocs);
 
     }
 
+    public List<TourListEcDTO> getTourListByTitle(String title, Pageable pageable) {
+        Page<TourListDoc> tourListDocPage = tourListDocRepository.findByTitle(title, pageable);
+        return  EcMapper.INSTANCE.toTourListEcDTOs(tourListDocPage.getContent());
+
+    }
+
     public List<TourListEcDTO> getTourListByOverview(String overview) {
+        return EcMapper.INSTANCE.toTourListEcDTOs(tourListDocRepository.findByOverview(overview));
+    }
 
-        Optional<TourListDoc> tourListDocs = tourListDocRepository.findByOverview(overview);
 
-        if(tourListDocs.isPresent()) {
-            return EcMapper.INSTANCE.toTourListEcDTOs((List<TourListDoc>) tourListDocs.get()) ;
-        }
-        return  new LinkedList<>();
+
+    public List<TourListEcDTO> getTourListByOverview(String overview, Pageable pageable) {
+        Page<TourListDoc> tourListDocPage = tourListDocRepository.findByOverview(overview, pageable);
+        return  EcMapper.INSTANCE.toTourListEcDTOs(tourListDocPage.getContent());
 
     }
 
