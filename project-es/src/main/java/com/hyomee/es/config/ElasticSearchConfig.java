@@ -21,7 +21,9 @@ import javax.net.ssl.SSLContext;
 import java.io.File;
 import java.io.IOException;
 
-
+/**
+ * 직접 구현
+ */
 @Getter
 @Setter
 @Slf4j

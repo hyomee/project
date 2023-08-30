@@ -2,6 +2,7 @@ package com.hyomee.service.elastic.tour.controller;
 
 import com.hyomee.core.utils.ResponseUtils;
 import com.hyomee.service.elastic.tour.service.TourListServie;
+import jakarta.websocket.server.PathParam;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -20,9 +21,9 @@ public class TourListController {
         return ResponseUtils.completed(tourListServie.getTourListByTitle(searchValue));
     }
 
-    @GetMapping("/ec/title/{value}/{size}")
+    @GetMapping("/ec/title/page")
     public ResponseEntity getTitle(@RequestParam("searchValue") String searchValue,
-                                   @PageableDefault(size = 10, value = 0) Pageable pageable) {
+                                  @PageableDefault(size = 10, value = 0) Pageable pageable) {
         return ResponseUtils.completed(tourListServie.getTourListByTitle(searchValue, pageable));
     }
 
@@ -33,7 +34,7 @@ public class TourListController {
 
 
 
-    @GetMapping("/ec/overview/{value}/{size}")
+    @GetMapping("/ec/overview/page")
     public ResponseEntity getTourListByTitlePage(@RequestParam("searchValue") String searchValue,
                                                  @PageableDefault(size = 10, value = 0) Pageable pageable) {
         return ResponseUtils.completed(tourListServie.getTourListByOverview(searchValue, pageable));

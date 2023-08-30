@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.jetbrains.annotations.NotNull;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -16,8 +17,10 @@ public class TourListEcDTO {
     private String contentid;
     private String addr1;
     private String addr2;
-    private String areacode;
-    private String booktour;
+
+    private int areacode;
+
+    private int booktour;
     private String cat1;
     private String cat2;
     private String cat3;
@@ -28,7 +31,8 @@ public class TourListEcDTO {
     private String cpyrhtDivCd;
     private String mapx;
     private String mapy;
-    private String mlevel;
+
+    private int mlevel;
     private String modifiedtime;
     private String sigungucode;
     private String tel;

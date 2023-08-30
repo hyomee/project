@@ -28,8 +28,10 @@ public class TourListDoc {
 
     @Field(type = FieldType.Text, analyzer = "nori")
     private String addr2;
-    private String areacode;
-    private String booktour;
+    @Field(type = FieldType.Integer )
+    private int areacode;
+    @Field(type = FieldType.Integer )
+    private int booktour;
     private String cat1;
     private String cat2;
     private String cat3;
@@ -40,7 +42,8 @@ public class TourListDoc {
     private String cpyrhtDivCd;
     private String mapx;
     private String mapy;
-    private String mlevel;
+    @Field(type = FieldType.Integer )
+    private int mlevel;
     private String modifiedtime;
     private String sigungucode;
     private String tel;

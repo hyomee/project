@@ -1,0 +1,38 @@
+# 홈 8.9.0
+#es:
+#  host: 172.19.164.132
+#  port: 9200
+#  username: elastic
+#  password: ji_DrcMq5xL+aCs+6VjO
+#  schemeName: https
+#  ssl: fingerprint        # pwd, fingerprint, ca
+#  fingerprint: 8ff2a69c78554e2fbc80baa50742fe10de86583b13df24efd4c7f191f804fada
+#  cadrt: D:\STUDY\SPRINGBOOT\hybird\elk\http_ca.crt
+
+# 홈 8.7.1
+#es:
+#  host: 172.19.164.132
+#  port: 9200
+#  username: elastic
+#  password: ji_DrcMq5xL+aCs+6VjO
+#  schemeName: https
+#  ssl: fingerprint        # pwd, fingerprint, ca
+#  fingerprint: 8ff2a69c78554e2fbc80baa50742fe10de86583b13df24efd4c7f191f804fada
+#  cadrt: D:\STUDY\SPRINGBOOT\hybird\elk\http_ca.crt
+
+# 홈 8.7.1
+es:
+  host: 172.19.164.132
+  port: 9200
+  username: elastic
+  password: 1n=eBasM2jGx1EZF07DY
+  schemeName: https
+  ssl: fingerprint        # pwd, fingerprint, ca
+  fingerprint: 3f96bceb356611a7e6d660f4501f91ea3d13ebd732022c961b0cdda5f2d31f00
+  cadrt: D:\STUDY\SPRINGBOOT\hybird\elk\http_ca.crt
+
+#doc:
+#  demoIndex: demo
+#  articleIndex: article
+
+tourlistDir: D:\PRJ\project\initData\

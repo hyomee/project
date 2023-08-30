@@ -5,14 +5,17 @@ import com.google.gson.reflect.TypeToken;
 import com.hyomee.core.utils.JsonFileReadUtils;
 import com.hyomee.service.elastic.tour.doc.TourListDoc;
 import com.hyomee.service.elastic.tour.dto.TourListEcDTO;
+import com.hyomee.service.elastic.tour.dto.TourListEcTmpDTO;
 import com.hyomee.service.elastic.tour.mapper.EcMapper;
 import com.hyomee.service.elastic.tour.repository.TourListDocRepository;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.io.*;
+import java.util.LinkedList;
 import java.util.List;
 
 @RequiredArgsConstructor
@@ -33,10 +36,18 @@ public class TourlistLoagingService {
 
     Reader reader = JsonFileReadUtils.fileLoad(tourlistDir, filename);
 
-    List<TourListEcDTO> tourlistEcDTOs =  gson.fromJson(reader,
-            new TypeToken<List<TourListEcDTO>>(){}.getType() );
+    List<TourListEcTmpDTO> tourlistEcDTOTmps =  gson.fromJson(reader,
+            new TypeToken<List<TourListEcTmpDTO>>(){}.getType() );
 
-    List<TourListDoc> tourListDocs = EcMapper.INSTANCE.toTourListDOCs(tourlistEcDTOs);
+
+    List<TourListEcTmpDTO> tourlistEcDTOTmpNew = new LinkedList<>();
+    for (TourListEcTmpDTO tourlistEcDTOTmp : tourlistEcDTOTmps) {
+      if (StringUtils.isEmpty(tourlistEcDTOTmp.getAreacode())) tourlistEcDTOTmp.setAreacode("0");
+      if (StringUtils.isEmpty(tourlistEcDTOTmp.getBooktour())) tourlistEcDTOTmp.setBooktour("0");
+      if (StringUtils.isEmpty(tourlistEcDTOTmp.getMlevel())) tourlistEcDTOTmp.setMlevel("0");
+      tourlistEcDTOTmpNew.add(tourlistEcDTOTmp);
+    }
+    List<TourListDoc> tourListDocs = EcMapper.INSTANCE.toTourListDocFromTmps(tourlistEcDTOTmpNew);
     int i = 0;
     for (TourListDoc tourListDoc : tourListDocs) {
       tourListDOCRepository.save (tourListDoc);
