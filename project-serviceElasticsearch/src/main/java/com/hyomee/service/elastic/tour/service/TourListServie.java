@@ -1,5 +1,6 @@
 package com.hyomee.service.elastic.tour.service;
 
+import com.hyomee.es.dto.ResponsePageDTO;
 import com.hyomee.service.elastic.tour.doc.TourListDoc;
 import com.hyomee.service.elastic.tour.dto.TourListEcDTO;
 import com.hyomee.service.elastic.tour.mapper.EcMapper;
@@ -8,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.elasticsearch.core.SearchHit;
 import org.springframework.stereotype.Service;
 
 import java.util.LinkedList;
@@ -27,9 +29,9 @@ public class TourListServie {
 
     }
 
-    public List<TourListEcDTO> getTourListByTitle(String title, Pageable pageable) {
+    public ResponsePageDTO getTourListByTitle(String title, Pageable pageable) {
         Page<TourListDoc> tourListDocPage = tourListDocRepository.findByTitle(title, pageable);
-        return  EcMapper.INSTANCE.toTourListEcDTOs(tourListDocPage.getContent());
+        return  ResponsePageDTO.setResponsePageDTO(tourListDocPage);
 
     }
 
@@ -39,9 +41,15 @@ public class TourListServie {
 
 
 
-    public List<TourListEcDTO> getTourListByOverview(String overview, Pageable pageable) {
+    public ResponsePageDTO getTourListByOverview(String overview, Pageable pageable) {
         Page<TourListDoc> tourListDocPage = tourListDocRepository.findByOverview(overview, pageable);
-        return  EcMapper.INSTANCE.toTourListEcDTOs(tourListDocPage.getContent());
+        return  ResponsePageDTO.setResponsePageDTO(tourListDocPage);
+
+    }
+
+    public ResponsePageDTO findHitsByOverview(String overview, Pageable pageable) {
+        Page<SearchHit<TourListDoc>> tourListDocPage = tourListDocRepository.findHitsByOverview(overview, pageable);
+        return ResponsePageDTO.setResponsePageDTO(tourListDocPage);
 
     }
 

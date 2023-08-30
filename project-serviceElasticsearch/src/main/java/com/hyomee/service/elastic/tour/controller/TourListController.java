@@ -15,29 +15,35 @@ import org.springframework.web.bind.annotation.*;
 public class TourListController {
 
     private final TourListServie tourListServie;
-    @GetMapping("/ec/title")
+    @GetMapping("/es/title")
     // @RequestParam("title")
     public ResponseEntity getTitle(@RequestParam("searchValue") String searchValue) {
         return ResponseUtils.completed(tourListServie.getTourListByTitle(searchValue));
     }
 
-    @GetMapping("/ec/title/page")
+    @GetMapping("/es/title/pageing")
     public ResponseEntity getTitle(@RequestParam("searchValue") String searchValue,
-                                  @PageableDefault(size = 10, value = 0) Pageable pageable) {
+                                  @PageableDefault(size = 10, page = 0) Pageable pageable) {
         return ResponseUtils.completed(tourListServie.getTourListByTitle(searchValue, pageable));
     }
 
-    @GetMapping("/ec/overview")
+    @GetMapping("/es/overview")
     public ResponseEntity getTourListByOverview(@RequestParam("searchValue") String searchValue) {
         return ResponseUtils.completed(tourListServie.getTourListByOverview(searchValue));
     }
 
 
 
-    @GetMapping("/ec/overview/page")
+    @GetMapping("/es/overview/pageing")
     public ResponseEntity getTourListByTitlePage(@RequestParam("searchValue") String searchValue,
-                                                 @PageableDefault(size = 10, value = 0) Pageable pageable) {
+                                                 @PageableDefault(size = 10, page = 0) Pageable pageable) {
         return ResponseUtils.completed(tourListServie.getTourListByOverview(searchValue, pageable));
+    }
+
+    @GetMapping("/es/overview/hits")
+    public ResponseEntity getTourListByTitlehits(@RequestParam("searchValue") String searchValue,
+                                                 @PageableDefault(size = 10, page = 0) Pageable pageable) {
+        return ResponseUtils.completed(tourListServie.findHitsByOverview(searchValue, pageable));
     }
 
 }
