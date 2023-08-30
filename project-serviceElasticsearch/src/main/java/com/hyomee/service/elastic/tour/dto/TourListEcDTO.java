@@ -11,7 +11,6 @@ import lombok.NoArgsConstructor;
 @Builder
 public class TourListEcDTO {
 
-
     private String tourListId;
 
     private String contentid;

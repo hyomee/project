@@ -8,7 +8,7 @@ spring:
       - classpath:/config/custom/custom.yml
       - classpath:/config/custom/el.yml
   messages:
-    basename: message/message,  essage/exception
+    basename: message/message,  message/exception
     encoding: UTF-8
   main:
     allow-bean-definition-overriding: true

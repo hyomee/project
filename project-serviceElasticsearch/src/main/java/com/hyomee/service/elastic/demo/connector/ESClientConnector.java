@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
 @Service
 public class ESClientConnector {
 
-    @Value("${doc.demoIndex}")
+    @Value("${doc.demoIndex:es_example}")
     private String indexName;
 
     private final ElasticSearchConfig elasticSearchConfig;

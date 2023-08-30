@@ -18,8 +18,6 @@ public class TourListDoc {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long id;
-
     private String tourListId;
 
     @Field(type = FieldType.Text)
