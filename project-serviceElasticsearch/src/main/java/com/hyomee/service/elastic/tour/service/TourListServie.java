@@ -1,8 +1,11 @@
 package com.hyomee.service.elastic.tour.service;
 
+import co.elastic.clients.elasticsearch.core.SearchResponse;
 import com.hyomee.es.dto.ResponsePageDTO;
+import com.hyomee.es.dto.SearchResponse.SearchResDTO;
 import com.hyomee.service.elastic.tour.doc.TourListDoc;
 import com.hyomee.service.elastic.tour.dto.TourListEcDTO;
+import com.hyomee.service.elastic.tour.dto.TourListeReqDTO;
 import com.hyomee.service.elastic.tour.mapper.EcMapper;
 import com.hyomee.service.elastic.tour.repository.TourListDocRepository;
 import lombok.RequiredArgsConstructor;
@@ -50,6 +53,11 @@ public class TourListServie {
     public ResponsePageDTO findHitsByOverview(String overview, Pageable pageable) {
         Page<SearchHit<TourListDoc>> tourListDocPage = tourListDocRepository.findHitsByOverview(overview, pageable);
         return ResponsePageDTO.setResponsePageDTO(tourListDocPage);
+
+    }
+
+    public SearchResDTO findTourListDocByMatch(TourListeReqDTO tourListeReqDTO) {
+        return tourListDocRepository.getQueryMatch(tourListeReqDTO, TourListEcDTO.class);
 
     }
 

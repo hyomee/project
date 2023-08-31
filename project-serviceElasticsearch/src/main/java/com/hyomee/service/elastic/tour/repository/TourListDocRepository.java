@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface TourListDocRepository extends ElasticsearchRepository<TourListDoc, String> {
+public interface TourListDocRepository extends ElasticsearchRepository<TourListDoc, String> , TourListDocCustomRepository{
 
     List<TourListDoc> findByTitle(String title);
     Page<TourListDoc> findByTitle(String title, Pageable pageable);

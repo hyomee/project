@@ -1,4 +1,4 @@
-package com.hyomee.core.mapstruct;
+package com.hyomee.core.mapper;
 
 import java.util.List;
 

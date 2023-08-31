@@ -17,6 +17,7 @@ public interface EcMapper {
 
     EcMapper INSTANCE = Mappers.getMapper(EcMapper.class);
 
+    TourListEcDTO  toTourListEcDTO(TourListDoc tourListDoc) ;
     List<TourListDoc> toTourListDOCs(List<TourListEcDTO> tourListEcDTOs) ;
 
     List<TourListDoc> toTourListDocFromTmps(List<TourListEcTmpDTO> tourListEcTmpDTOs) ;

@@ -9,10 +9,46 @@ import javax.annotation.processing.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-08-31T00:23:12+0900",
+    date = "2023-08-31T18:50:24+0900",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 17.0.8 (Microsoft)"
 )
 public class EcMapperImpl implements EcMapper {
+
+    @Override
+    public TourListEcDTO toTourListEcDTO(TourListDoc tourListDoc) {
+        if ( tourListDoc == null ) {
+            return null;
+        }
+
+        TourListEcDTO.TourListEcDTOBuilder tourListEcDTO = TourListEcDTO.builder();
+
+        tourListEcDTO.tourListId( tourListDoc.getTourListId() );
+        tourListEcDTO.contentid( tourListDoc.getContentid() );
+        tourListEcDTO.addr1( tourListDoc.getAddr1() );
+        tourListEcDTO.addr2( tourListDoc.getAddr2() );
+        tourListEcDTO.areacode( tourListDoc.getAreacode() );
+        tourListEcDTO.booktour( tourListDoc.getBooktour() );
+        tourListEcDTO.cat1( tourListDoc.getCat1() );
+        tourListEcDTO.cat2( tourListDoc.getCat2() );
+        tourListEcDTO.cat3( tourListDoc.getCat3() );
+        tourListEcDTO.contenttypeid( tourListDoc.getContenttypeid() );
+        tourListEcDTO.createdtime( tourListDoc.getCreatedtime() );
+        tourListEcDTO.firstimage( tourListDoc.getFirstimage() );
+        tourListEcDTO.firstimage2( tourListDoc.getFirstimage2() );
+        tourListEcDTO.cpyrhtDivCd( tourListDoc.getCpyrhtDivCd() );
+        tourListEcDTO.mapx( tourListDoc.getMapx() );
+        tourListEcDTO.mapy( tourListDoc.getMapy() );
+        tourListEcDTO.mlevel( tourListDoc.getMlevel() );
+        tourListEcDTO.modifiedtime( tourListDoc.getModifiedtime() );
+        tourListEcDTO.sigungucode( tourListDoc.getSigungucode() );
+        tourListEcDTO.tel( tourListDoc.getTel() );
+        tourListEcDTO.title( tourListDoc.getTitle() );
+        tourListEcDTO.zipcode( tourListDoc.getZipcode() );
+        tourListEcDTO.contentid2( tourListDoc.getContentid2() );
+        tourListEcDTO.overview( tourListDoc.getOverview() );
+
+        return tourListEcDTO.build();
+    }
 
     @Override
     public List<TourListDoc> toTourListDOCs(List<TourListEcDTO> tourListEcDTOs) {
@@ -64,7 +100,7 @@ public class EcMapperImpl implements EcMapper {
 
         List<TourListEcDTO> list = new ArrayList<TourListEcDTO>( tourListDoc.size() );
         for ( TourListDoc tourListDoc1 : tourListDoc ) {
-            list.add( tourListDocToTourListEcDTO( tourListDoc1 ) );
+            list.add( toTourListEcDTO( tourListDoc1 ) );
         }
 
         return list;
@@ -183,41 +219,6 @@ public class EcMapperImpl implements EcMapper {
         tourListEcDTO.zipcode( tourListEcTmpDTO.getZipcode() );
         tourListEcDTO.contentid2( tourListEcTmpDTO.getContentid2() );
         tourListEcDTO.overview( tourListEcTmpDTO.getOverview() );
-
-        return tourListEcDTO.build();
-    }
-
-    protected TourListEcDTO tourListDocToTourListEcDTO(TourListDoc tourListDoc) {
-        if ( tourListDoc == null ) {
-            return null;
-        }
-
-        TourListEcDTO.TourListEcDTOBuilder tourListEcDTO = TourListEcDTO.builder();
-
-        tourListEcDTO.tourListId( tourListDoc.getTourListId() );
-        tourListEcDTO.contentid( tourListDoc.getContentid() );
-        tourListEcDTO.addr1( tourListDoc.getAddr1() );
-        tourListEcDTO.addr2( tourListDoc.getAddr2() );
-        tourListEcDTO.areacode( tourListDoc.getAreacode() );
-        tourListEcDTO.booktour( tourListDoc.getBooktour() );
-        tourListEcDTO.cat1( tourListDoc.getCat1() );
-        tourListEcDTO.cat2( tourListDoc.getCat2() );
-        tourListEcDTO.cat3( tourListDoc.getCat3() );
-        tourListEcDTO.contenttypeid( tourListDoc.getContenttypeid() );
-        tourListEcDTO.createdtime( tourListDoc.getCreatedtime() );
-        tourListEcDTO.firstimage( tourListDoc.getFirstimage() );
-        tourListEcDTO.firstimage2( tourListDoc.getFirstimage2() );
-        tourListEcDTO.cpyrhtDivCd( tourListDoc.getCpyrhtDivCd() );
-        tourListEcDTO.mapx( tourListDoc.getMapx() );
-        tourListEcDTO.mapy( tourListDoc.getMapy() );
-        tourListEcDTO.mlevel( tourListDoc.getMlevel() );
-        tourListEcDTO.modifiedtime( tourListDoc.getModifiedtime() );
-        tourListEcDTO.sigungucode( tourListDoc.getSigungucode() );
-        tourListEcDTO.tel( tourListDoc.getTel() );
-        tourListEcDTO.title( tourListDoc.getTitle() );
-        tourListEcDTO.zipcode( tourListDoc.getZipcode() );
-        tourListEcDTO.contentid2( tourListDoc.getContentid2() );
-        tourListEcDTO.overview( tourListDoc.getOverview() );
 
         return tourListEcDTO.build();
     }

@@ -1,6 +1,9 @@
 package com.hyomee.service.elastic.tour.controller;
 
+import co.elastic.clients.elasticsearch.core.SearchResponse;
 import com.hyomee.core.utils.ResponseUtils;
+import com.hyomee.service.elastic.tour.doc.TourListDoc;
+import com.hyomee.service.elastic.tour.dto.TourListeReqDTO;
 import com.hyomee.service.elastic.tour.service.TourListServie;
 import jakarta.websocket.server.PathParam;
 import lombok.RequiredArgsConstructor;
@@ -33,7 +36,6 @@ public class TourListController {
     }
 
 
-
     @GetMapping("/es/overview/pageing")
     public ResponseEntity getTourListByTitlePage(@RequestParam("searchValue") String searchValue,
                                                  @PageableDefault(size = 10, page = 0) Pageable pageable) {
@@ -44,6 +46,11 @@ public class TourListController {
     public ResponseEntity getTourListByTitlehits(@RequestParam("searchValue") String searchValue,
                                                  @PageableDefault(size = 10, page = 0) Pageable pageable) {
         return ResponseUtils.completed(tourListServie.findHitsByOverview(searchValue, pageable));
+    }
+
+    @GetMapping("/es/match")
+    public ResponseEntity getTourListByTitlehits( @RequestBody TourListeReqDTO tourListeReqDTO ) {
+        return ResponseUtils.completed(tourListServie.findTourListDocByMatch(tourListeReqDTO));
     }
 
 }

@@ -1,5 +1,6 @@
 package com.hyomee.service.elastic.tour.doc;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import lombok.*;
@@ -14,6 +15,7 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 @Setter
 @Getter
 @Builder
+@JsonIgnoreProperties(ignoreUnknown=true)
 public class TourListDoc {
 
     @Id
