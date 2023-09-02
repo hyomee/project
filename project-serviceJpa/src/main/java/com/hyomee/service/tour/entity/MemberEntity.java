@@ -1,37 +1,41 @@
 package com.hyomee.service.tour.entity;
 
+import com.hyomee.jpa.entity.AuditVO;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import java.time.LocalDate;
+import lombok.*;
 
 @Table(name = "TB_MEMBER")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode(callSuper=false)
 @Entity
-public class MemberEntity {
-  @Id
-  @GeneratedValue(strategy = GenerationType.UUID)
-  @Column(length = 32)
-  private String memberId;
+@Builder
+public class MemberEntity extends AuditVO {
 
-  @Column(length = 200)
-  private String name;
+    @Id
+    @Column(length = 36)
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private String memberNo;
 
-  @Column(length = 100)
-  private String pwd;
+    @Column(length = 32)
+    private String memberId;
 
-  private LocalDate birth;
+    @Column(length = 200)
+    private String name;
 
-  @Column(length = 1)
-  private String gender;
+    @Column(length = 100)
+    private String pwd;
 
-  @Column(length = 100)
-  private String phone;
+    @Column(length = 100)
+    private String birth;
 
-  @Column(length = 100)
-  private String email;
+    @Column(length = 1)
+    private String gender;
+
+    @Column(length = 100)
+    private String phone;
+
+    @Column(length = 100)
+    private String email;
 }

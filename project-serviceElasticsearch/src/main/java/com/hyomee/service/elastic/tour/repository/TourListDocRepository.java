@@ -2,7 +2,6 @@ package com.hyomee.service.elastic.tour.repository;
 
 
 import com.hyomee.service.elastic.tour.doc.TourListDoc;
-import com.hyomee.service.elastic.tour.dto.TourListEcDTO;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.elasticsearch.annotations.Highlight;

@@ -33,12 +33,13 @@ public class JsonFileReadUtils {
     public static Reader fileLoad(String dirtory, String filename) {
         // Reader reader = null;
         BufferedReader reader = null;
+        String filepath = dirtory + filename + ".json";
         try {
-            String filepath = dirtory + filename + ".json";
-            reader = new BufferedReader(new InputStreamReader(new FileInputStream(filepath),"UTF-8"));
+            // ,"UTF-8"
+            reader = new BufferedReader(new InputStreamReader(new FileInputStream(filepath)));
             // reader = new FileReader( this.tourlistDir + filename + ".json");
-        } catch (FileNotFoundException | UnsupportedEncodingException e) {
-            throw new BizException(filename + " 파일이 없습니다.");
+        } catch (FileNotFoundException  e) {
+            throw new BizException(filepath + " 파일이 없습니다.e");
         }
         return reader;
     }

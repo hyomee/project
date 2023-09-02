@@ -18,10 +18,10 @@ spring:
       settings.trace: false             # 추적 활성화
       settings.web-allow-others: false  # CORS로 다른 사용자 접근 허용 여부
   datasource:
+    driverClassName: org.h2.Driver
     url: jdbc:h2:file:./db/demodb     # 파일 저장소
     username: sa
     password: hhs1234
-    driverClassName: org.h2.Driver
     type: com.zaxxer.hikari.HikariDataSource  # 결 풀이 HikariDataSource의 전용 구현을 사용하고 반환하도록 강제
     hikari:                             # DB Connection Pool
       auto-commit: true                 # 자동커밋 여부. (default: true)

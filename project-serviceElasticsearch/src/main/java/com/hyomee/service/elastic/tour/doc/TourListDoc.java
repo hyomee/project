@@ -22,40 +22,49 @@ public class TourListDoc {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private String tourListId;
 
-    @Field(type = FieldType.Text)
     private String contentid;
+
+    private String contenttypeid;
+
+    private String cat1;
+    private String cat2;
+    private String cat3;
+
+    @Field(type = FieldType.Text, analyzer = "nori")
+    private String title;
+
+    private String zipcode;
 
     @Field(type = FieldType.Text, analyzer = "nori")
     private String addr1;
 
     @Field(type = FieldType.Text, analyzer = "nori")
     private String addr2;
-    @Field(type = FieldType.Integer )
-    private int areacode;
-    @Field(type = FieldType.Integer )
-    private int booktour;
-    private String cat1;
-    private String cat2;
-    private String cat3;
-    private String contenttypeid;
-    private String createdtime;
-    private String firstimage;
-    private String firstimage2;
-    private String cpyrhtDivCd;
-    private String mapx;
-    private String mapy;
-    @Field(type = FieldType.Integer )
-    private int mlevel;
-    private String modifiedtime;
-    private String sigungucode;
+
     private String tel;
 
-    @Field(type = FieldType.Text, analyzer = "nori")
-    private String title;
-
-    private String zipcode;
-    private String contentid2;
+    private String areacode;
+    private String sigungucode;
+    private String firstimage;
+    private String firstimage2;
 
     @Field(type = FieldType.Text, analyzer = "nori")
     private String overview;
+
+    private String booktour;
+
+    private String mapx;
+    private String mapy;
+    @Field(type = FieldType.Integer )
+    private int recommendCount;
+    @Field(type = FieldType.Integer )
+    private int addCount;
+
+    private String createdtime;
+    private String cpyrhtDivCd;
+    private String mlevel;
+    private String modifiedtime;
+    private String contentid2;
+
+
 }

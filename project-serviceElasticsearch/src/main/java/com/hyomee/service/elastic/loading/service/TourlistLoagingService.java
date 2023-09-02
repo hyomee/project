@@ -3,9 +3,9 @@ package com.hyomee.service.elastic.loading.service;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.hyomee.core.utils.JsonFileReadUtils;
+import com.hyomee.core.utils.UuidUtils;
 import com.hyomee.service.elastic.tour.doc.TourListDoc;
 import com.hyomee.service.elastic.tour.dto.TourListEcDTO;
-import com.hyomee.service.elastic.tour.dto.TourListEcTmpDTO;
 import com.hyomee.service.elastic.tour.mapper.EcMapper;
 import com.hyomee.service.elastic.tour.repository.TourListDocRepository;
 import lombok.NonNull;
@@ -15,7 +15,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.io.*;
-import java.util.LinkedList;
 import java.util.List;
 
 @RequiredArgsConstructor
@@ -36,18 +35,22 @@ public class TourlistLoagingService {
 
     Reader reader = JsonFileReadUtils.fileLoad(tourlistDir, filename);
 
-    List<TourListEcTmpDTO> tourlistEcDTOTmps =  gson.fromJson(reader,
-            new TypeToken<List<TourListEcTmpDTO>>(){}.getType() );
+    List<TourListEcDTO> tourlistDTOs =  gson.fromJson(reader,
+            new TypeToken<List<TourListEcDTO>>(){}.getType() );
 
 
-    List<TourListEcTmpDTO> tourlistEcDTOTmpNew = new LinkedList<>();
-    for (TourListEcTmpDTO tourlistEcDTOTmp : tourlistEcDTOTmps) {
-      if (StringUtils.isEmpty(tourlistEcDTOTmp.getAreacode())) tourlistEcDTOTmp.setAreacode("0");
-      if (StringUtils.isEmpty(tourlistEcDTOTmp.getBooktour())) tourlistEcDTOTmp.setBooktour("0");
-      if (StringUtils.isEmpty(tourlistEcDTOTmp.getMlevel())) tourlistEcDTOTmp.setMlevel("0");
-      tourlistEcDTOTmpNew.add(tourlistEcDTOTmp);
+
+    for( int i = 0 ; i < tourlistDTOs.size() ; i++) {
+//      if (StringUtils.isEmpty(tourlistEcDTOTmp.getAreacode())) tourlistEcDTOTmp.setAreacode("0");
+//      if (StringUtils.isEmpty(tourlistEcDTOTmp.getBooktour())) tourlistEcDTOTmp.setBooktour("0");
+//      if (StringUtils.isEmpty(tourlistEcDTOTmp.getMlevel())) tourlistEcDTOTmp.setMlevel("0");
+//      tourlistDTOs.get(i).setAreacode(StringUtils.defaultString());
+//      tourlistDTOs.get(i).setBooktour(UuidUtils.getRandom(300,50));
+
+      tourlistDTOs.get(i).setRecommendCount(UuidUtils.getRandom(300,50));
+      tourlistDTOs.get(i).setAddCount(UuidUtils.getRandom(100,20));
     }
-    List<TourListDoc> tourListDocs = EcMapper.INSTANCE.toTourListDocFromTmps(tourlistEcDTOTmpNew);
+    List<TourListDoc> tourListDocs = EcMapper.INSTANCE.toTourListDOCs(tourlistDTOs);
     int i = 0;
     for (TourListDoc tourListDoc : tourListDocs) {
       tourListDOCRepository.save (tourListDoc);

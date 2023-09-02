@@ -6,7 +6,7 @@ spring:
   config:
     import:
       - classpath:/config/custom/custom.yml
-      - classpath:/config/custom/office_el.yml
+      - classpath:/config/custom/private_el.yml
   messages:
     basename: message/message,  message/exception
     encoding: UTF-8

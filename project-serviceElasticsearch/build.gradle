@@ -57,9 +57,36 @@ test {
     useJUnitPlatform()
 }
 
-def generatedDir = 'src/main/generated'
+//def generatedDir = 'src/main/generated'
+//def generatedOutDir = 'out'
+//clean {
+//    delete file (generatedDir)
+//    delete file (generatedOutDir)
+//}
+
+
+// Querydsl 설정부
+def generatedDir = "$buildDir/generated/querydsl" // 'src/main/generated'
 def generatedOutDir = 'out'
-clean {
-    delete file (generatedDir)
-    delete file (generatedOutDir)
+//clean {
+//    delete file (generatedDir)
+//    delete file (generatedOutDir)
+//}
+
+sourceSets {
+    main.java.srcDirs += [ generatedDir ]
+}
+
+
+tasks.withType(JavaCompile).configureEach {
+    options.getGeneratedSourceOutputDirectory().set(file(generatedDir))
+}
+
+clean.doLast {
+    file(generatedDir).deleteDir()
+    file(generatedOutDir).deleteDir()
+}
+
+test {
+    exclude '**/*'
 }

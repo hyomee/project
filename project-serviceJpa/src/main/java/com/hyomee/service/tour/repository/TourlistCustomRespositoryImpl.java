@@ -80,6 +80,10 @@ public class TourlistCustomRespositoryImpl implements TourlistCustomRespository 
     private FactoryExpressionBase<TourlistDTO> makeProjectiosBean() {
         return Projections.bean(TourlistDTO.class,
                 qTourlistEntity.contentid ,
+                qTourlistEntity.contenttypeid ,
+                qTourlistEntity.cat1 ,
+                qTourlistEntity.cat2 ,
+                qTourlistEntity.cat3 ,
                 qTourlistEntity.title ,
                 qTourlistEntity.zipcode ,
                 qTourlistEntity.addr ,
@@ -92,7 +96,9 @@ public class TourlistCustomRespositoryImpl implements TourlistCustomRespository 
                 qTourlistEntity.firstimage2 ,
                 qTourlistEntity.overview ,
                 qTourlistEntity.mapx ,
-                qTourlistEntity.mapy );
+                qTourlistEntity.mapy ,
+                qTourlistEntity.recommendCount ,
+                qTourlistEntity.addCount );
     }
 
     private ConstructorExpression<TourlistDTO> makeProjectiosConstructor() {

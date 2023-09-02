@@ -4,6 +4,7 @@ import lombok.*;
 
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
+@EqualsAndHashCode(callSuper=false)
 @Data
 @Builder
 public class TourlistConditionReqDTO {
