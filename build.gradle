@@ -65,7 +65,8 @@ subprojects {
 
         // https://mvnrepository.com/artifact/com.fasterxml.uuid/java-uuid-generator
         implementation group: 'com.fasterxml.uuid', name: 'java-uuid-generator', version: '4.2.0'
-
+        // implementation 'com.fastxml.jackson.datatype:jackson-datatype-jsr310'
+        implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.11.0'
 
         testImplementation 'org.springframework.boot:spring-boot-starter-test:3.1.3'
         testCompileOnly 'org.projectlombok:lombok:1.18.26'

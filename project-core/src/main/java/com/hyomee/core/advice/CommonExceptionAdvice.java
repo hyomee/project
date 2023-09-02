@@ -27,6 +27,7 @@ public class CommonExceptionAdvice {
 
   @ExceptionHandler(IOException.class)
   public ResponseEntity<ResponseDTO> handleIOException(IOException exception) {
+    exception.printStackTrace();
     log.error(exception.getMessage());
     ResponseDTO responseDTO = ResponseDTO.builder()
             .code(String.valueOf(HttpStatus.INTERNAL_SERVER_ERROR.value()))
@@ -43,6 +44,7 @@ public class CommonExceptionAdvice {
 
   @ExceptionHandler(Exception.class)
   public ResponseEntity<ResponseDTO> handleException(Exception exception) {
+    exception.printStackTrace();
     log.error(exception.getMessage());
     ResponseDTO responseDTO = ResponseDTO.builder()
             .code(String.valueOf(HttpStatus.INTERNAL_SERVER_ERROR.value()))

@@ -1,13 +1,15 @@
 package com.hyomee.service.tour.dto;
 
+import com.hyomee.jpa.dto.AuditDTO;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@EqualsAndHashCode(callSuper=false)
 @Data
-@Builder
-public class TourlistDTO {
+@NoArgsConstructor
+@EqualsAndHashCode(callSuper=false)
+@AllArgsConstructor
+@SuperBuilder
+public class TourlistDTO extends AuditDTO {
 
   private String contentid;
   private String contenttypeid;

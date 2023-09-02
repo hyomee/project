@@ -3,15 +3,16 @@ package com.hyomee.service.tour.entity;
 import com.hyomee.jpa.entity.AuditVO;
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 @Table(name = "TB_PLANNER")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode(callSuper=false)
+@EqualsAndHashCode(callSuper=true)
 @Entity
-@Builder
+@SuperBuilder
 public class PlannerEntity extends AuditVO {
 
     @Id

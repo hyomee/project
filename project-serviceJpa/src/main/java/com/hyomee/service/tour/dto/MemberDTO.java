@@ -1,13 +1,15 @@
 package com.hyomee.service.tour.dto;
 
+import com.hyomee.jpa.dto.AuditDTO;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@EqualsAndHashCode(callSuper=false)
 @Data
-@Builder
-public class MemberDTO {
+@NoArgsConstructor
+@EqualsAndHashCode(callSuper=false)
+@AllArgsConstructor
+@SuperBuilder
+public class MemberDTO extends AuditDTO {
 
     private String memberNo;
 

@@ -9,7 +9,7 @@ import lombok.experimental.SuperBuilder;
 @EqualsAndHashCode(callSuper=false)
 @AllArgsConstructor
 @SuperBuilder
-public class DemoDTO extends AuditDTO {
+public class DemoEventDTO extends AuditDTO {
   private int id;
   private String title;
   private String content;

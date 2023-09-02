@@ -1,8 +1,9 @@
 package com.hyomee.service.tour.demo.controller;
 
 import com.hyomee.core.utils.ResponseUtils;
-
 import com.hyomee.service.tour.demo.dto.DemoDTO;
+import com.hyomee.service.tour.demo.dto.DemoEventDTO;
+import com.hyomee.service.tour.demo.service.DemoEventService;
 import com.hyomee.service.tour.demo.service.DemoService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -15,31 +16,25 @@ import java.util.List;
 @Slf4j
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/jpademo")
-public class DemoController {
+@RequestMapping("/demoevent")
+public class DemoEventController {
 
-  private final DemoService demoService;
+  private final DemoEventService demoEventService;
 
-  @GetMapping(value = "")
-  public ResponseEntity getDemoEntity(DemoDTO demoDTO) {
-    List<DemoDTO> demoDTOs = demoService.retrieveDemo();
-    return ResponseUtils.completed(demoDTOs);
-  }
 
-  @GetMapping(value = "/page/{name}")
-  public List<DemoDTO> getDemo(@PathVariable String name,
-                               Pageable pageable) {
-    return demoService.retrieveDemo(name, pageable);
+  @GetMapping(value = "/{name}")
+  public DemoEventDTO getDemoEvent(@PathVariable String name ) {
+    return demoEventService.retrieveDemoEvent(name);
   }
 
   @PostMapping(value = "")
-  public DemoDTO saveDemo(@RequestBody DemoDTO demoDTO) {
-    return demoService.saveDemo(demoDTO);
+  public DemoEventDTO saveEventDemo(@RequestBody DemoEventDTO demoEventDTO) {
+    return demoEventService.saveEventDemo(demoEventDTO);
   }
 
   @DeleteMapping(value = "/{id}")
   public boolean getDemo(@PathVariable String id ) {
-    return demoService.deleteId(id);
+    return demoEventService.deleteId(id);
   }
 
 

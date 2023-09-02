@@ -2,6 +2,7 @@ package com.hyomee.core.common.dto;
 
 import lombok.Builder;
 import lombok.Data;
+import lombok.experimental.SuperBuilder;
 
 @Data
 @Builder

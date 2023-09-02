@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@Builder
+@SuperBuilder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class DemoDTO {
     private String uuid;

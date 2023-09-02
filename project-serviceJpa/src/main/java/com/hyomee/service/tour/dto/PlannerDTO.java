@@ -1,15 +1,17 @@
 package com.hyomee.service.tour.dto;
 
+import com.hyomee.jpa.dto.AuditDTO;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.util.List;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@EqualsAndHashCode(callSuper=false)
 @Data
-@Builder
-public class PlannerDTO {
+@NoArgsConstructor
+@EqualsAndHashCode(callSuper=false)
+@AllArgsConstructor
+@SuperBuilder
+public class PlannerDTO extends AuditDTO {
 
     private String plannerNo;
 
@@ -20,7 +22,5 @@ public class PlannerDTO {
     private String startDate;
 
     private String endDate;
-
-    private String localDateTime;
 
 }

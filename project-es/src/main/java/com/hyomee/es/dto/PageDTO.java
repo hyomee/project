@@ -4,7 +4,7 @@ import lombok.Builder;
 import lombok.Data;
 
 @Data
-@Builder
+@SuperBuilder
 public class PageDTO {
 
   private long total;

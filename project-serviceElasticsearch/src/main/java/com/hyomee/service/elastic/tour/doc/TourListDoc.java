@@ -14,7 +14,7 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 @NoArgsConstructor
 @Setter
 @Getter
-@Builder
+@SuperBuilder
 @JsonIgnoreProperties(ignoreUnknown=true)
 public class TourListDoc {
 

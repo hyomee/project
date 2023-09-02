@@ -1,11 +1,9 @@
 package com.hyomee.service.tour.entity;
 
 import com.hyomee.jpa.entity.AuditVO;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 import org.hibernate.annotations.ColumnDefault;
 
 
@@ -13,9 +11,9 @@ import org.hibernate.annotations.ColumnDefault;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode(callSuper=false)
+@EqualsAndHashCode(callSuper=true)
 @Entity
-@Builder
+@SuperBuilder
 public class TourlistEntity extends AuditVO {
     @Id
     @Column(length = 20)
@@ -78,4 +76,6 @@ public class TourlistEntity extends AuditVO {
     @Column(length = 10)
     @ColumnDefault("0")
     private int addCount;
+
+
 }
