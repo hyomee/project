@@ -21,10 +21,8 @@ public class DemoEventService {
 
   public DemoEventDTO saveEventDemo(DemoEventDTO demoEventDTO ) {
     DemoEventEntity demoEventEntity = DemoEventMapper.INSTANCE.toEntity(demoEventDTO);
-    demoEventRepository.save(demoEventEntity);
-
-
-    return  DemoEventMapper.INSTANCE.toDTO(demoEventEntity);
+    DemoEventEntity demoEventEntitySave = demoEventRepository.save(demoEventEntity);
+    return  DemoEventMapper.INSTANCE.toDTO(demoEventEntitySave);
   }
 
 

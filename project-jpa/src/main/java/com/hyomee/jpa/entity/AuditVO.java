@@ -8,6 +8,7 @@ import lombok.experimental.SuperBuilder;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
@@ -19,19 +20,30 @@ import java.time.LocalDateTime;
 */
 @Setter
 @Getter
-@ToString()
+@ToString
 @AllArgsConstructor
 @NoArgsConstructor
 @SuperBuilder
+@Embeddable
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
 public class AuditVO {
+
     @CreatedDate
     @Column(updatable = false)
     private LocalDateTime createDateTime;
 
+    @CreatedBy
+    @Column(updatable = false)
+    private String createUserid;
+
     @LastModifiedDate
     private LocalDateTime updateDataTime;
+
+    @LastModifiedBy
+    private String updateUserId;
+
+
 
 
 //    @PrePersist

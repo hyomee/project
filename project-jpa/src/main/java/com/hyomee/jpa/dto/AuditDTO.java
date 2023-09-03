@@ -24,6 +24,12 @@ import java.time.LocalDateTime;
 public class AuditDTO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm:ss")
     private LocalDateTime createDateTime;
+
+    private String createUserid;
+
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm:ss")
     private LocalDateTime updateDataTime;
+
+    private String updateUserId;
+
 }
