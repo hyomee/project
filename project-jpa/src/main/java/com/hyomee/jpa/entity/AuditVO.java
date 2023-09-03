@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -23,25 +24,24 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @SuperBuilder
 @MappedSuperclass
-// @EntityListeners(AuditingEntityListener.class)
+@EntityListeners(AuditingEntityListener.class)
 public class AuditVO {
-    // @CreatedDate
-    // @Convert(converter = CreateDateConvert.class)
+    @CreatedDate
+    @Column(updatable = false)
     private LocalDateTime createDateTime;
 
-    // @LastModifiedDate
-    // @Convert(converter = UpdateDateConvert.class)
+    @LastModifiedDate
     private LocalDateTime updateDataTime;
 
 
-    @PrePersist
-    public void prePersistAuditVO() {
-        if (this.createDateTime == null){
-            this.createDateTime = DateTimeUtils.getCurrentDateTime();
-        }
-
-        this.updateDataTime = DateTimeUtils.getCurrentDateTime();
-    }
+//    @PrePersist
+//    public void prePersistAuditVO() {
+//        if (this.createDateTime == null){
+//            this.createDateTime = DateTimeUtils.getCurrentDateTime();
+//        }
+//
+//        this.updateDataTime = DateTimeUtils.getCurrentDateTime();
+//    }
 ////
 ////    @PostPersist
 ////    public void postPersistAuditVO() {
@@ -55,16 +55,16 @@ public class AuditVO {
 ////        this.updateDataTime = DateTimeUtils.convertTypeCurrentDateTime(this.createDateTime);
 ////    }
 //
-    @PreUpdate
-    public void preUpdateAuditVO() {
-        if (this.createDateTime != null) {
-            this.createDateTime = DateTimeUtils.convertTypeCurrentDateTime(this.createDateTime);
-        }
-
-        if (this.createDateTime == null) {
-            this.updateDataTime = DateTimeUtils.convertTypeCurrentDateTime(this.createDateTime);
-        }
-    }
+//    @PreUpdate
+//    public void preUpdateAuditVO() {
+//        if (this.createDateTime != null) {
+//            this.createDateTime = DateTimeUtils.convertTypeCurrentDateTime(this.createDateTime);
+//        }
+//
+//        if (this.createDateTime == null) {
+//            this.updateDataTime = DateTimeUtils.convertTypeCurrentDateTime(this.createDateTime);
+//        }
+//    }
 //
 //    @PostUpdate
 //    public void postUpdateAuditVO() {

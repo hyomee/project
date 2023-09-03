@@ -3,7 +3,7 @@ package com.hyomee.es.dto;
 import lombok.Builder;
 import org.springframework.data.domain.Page;
 
-@SuperBuilder
+@Builder
 public class ResponsePageDTO {
   public PageDTO page;
   public Object content;

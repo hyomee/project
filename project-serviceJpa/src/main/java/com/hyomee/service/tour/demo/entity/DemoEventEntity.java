@@ -13,7 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString()
+@ToString( callSuper = true )
 @Table(name = "TB_EVENT_DEMO")
 @EntityListeners(EntityEventCallListener.class)
 @Entity
