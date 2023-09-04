@@ -1,7 +1,10 @@
 package com.hyomee.service.tour.demo.entity;
 
+import com.hyomee.jpa.dto.AuditDTO;
+import com.hyomee.jpa.entity.AuditVO;
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 import lombok.extern.slf4j.Slf4j;
 
 
@@ -13,8 +16,8 @@ import lombok.extern.slf4j.Slf4j;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Builder
-public class DemoEntity {
+@SuperBuilder
+public class DemoEntity extends AuditVO {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;

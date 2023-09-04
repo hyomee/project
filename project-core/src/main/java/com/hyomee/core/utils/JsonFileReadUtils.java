@@ -36,9 +36,10 @@ public class JsonFileReadUtils {
         String filepath = dirtory + filename + ".json";
         try {
             // ,"UTF-8"
-            reader = new BufferedReader(new InputStreamReader(new FileInputStream(filepath)));
+             reader = new BufferedReader(new InputStreamReader(new FileInputStream(filepath),"UTF-8"));
+            //reader = new BufferedReader(new InputStreamReader(new FileInputStream(filepath) ));
             // reader = new FileReader( this.tourlistDir + filename + ".json");
-        } catch (FileNotFoundException  e) {
+        } catch (FileNotFoundException | UnsupportedEncodingException e) {
             throw new BizException(filepath + " 파일이 없습니다.e");
         }
         return reader;

@@ -3,7 +3,8 @@ package com.hyomee.service.tour.dto;
 import com.hyomee.jpa.dto.AuditDTO;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
-
+@Setter
+@Getter
 @Data
 @NoArgsConstructor
 @EqualsAndHashCode(callSuper=false)

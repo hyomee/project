@@ -2,6 +2,9 @@ package com.hyomee.es.dto.SearchResponse;
 
 import co.elastic.clients.elasticsearch.core.SearchResponse;
 import co.elastic.clients.elasticsearch.core.search.Hit;
+import co.elastic.clients.elasticsearch.core.search.TotalHits;
+import co.elastic.clients.elasticsearch.core.search.TotalHitsRelation;
+import com.hyomee.es.config.ElasticUtils;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -20,20 +23,29 @@ public class SearchResDTO {
     private long size;
     private long total;
     private List<?> hits;
+    boolean isExactResult;
 
 
     public static <T, t> SearchResDTO initSearchResDTO(SearchResponse<Map> searchResponse, T t) {
 
-        List<t> collect = (List<t>) searchResponse.hits().hits().stream().map(Hit::source).collect(Collectors.toList());
+        List<t> collect = ElasticUtils.getHitCollect(searchResponse, t);
 
 
         return SearchResDTO.builder()
-                .total( searchResponse.hits().total().value())
+                .total((Long) ElasticUtils.getHitsTotal(searchResponse).get("total"))
+                .isExactResult( (boolean) ElasticUtils.getHitsTotal(searchResponse).get("isEq") )
                 .took(searchResponse.took())
                 .size(searchResponse.hits().hits().size())
                 .hits(collect).build();
     }
 }
+
+/**
+ * Query byMaxPrice = RangeQuery.of(r -> r
+ *     .field("price")
+ *     .gte(JsonData.of(maxPrice))
+ * )._toQuery();
+ */
 
 /**
  * {
