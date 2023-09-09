@@ -1,6 +1,5 @@
 package com.hyomee.service.elastic.tour.service;
 
-import co.elastic.clients.elasticsearch.core.SearchResponse;
 import com.hyomee.core.utils.UuidUtils;
 import com.hyomee.es.dto.ResponsePageDTO;
 import com.hyomee.es.dto.SearchResponse.SearchResDTO;
@@ -12,11 +11,11 @@ import com.hyomee.service.elastic.tour.repository.TourListDocRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.elasticsearch.core.SearchHit;
 import org.springframework.stereotype.Service;
 
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 
@@ -96,5 +95,18 @@ public class TourListServie {
         }
 
     }
+
+
+    public ResponsePageDTO findByOrderByRecommendCountDesc() {
+        Pageable pageable = PageRequest.of(0, 5);
+        Page<TourListDoc> tourListDocPage = tourListDocRepository.findByOrderByRecommendCountDesc(pageable);
+        return  ResponsePageDTO.setResponsePageDTO(tourListDocPage);
+    }
+    public ResponsePageDTO findByOrderByAddCountDesc() {
+        Pageable pageable = PageRequest.of(0, 5);
+        Page<TourListDoc> tourListDocPage = tourListDocRepository.findByOrderByAddCountDesc(pageable);
+        return  ResponsePageDTO.setResponsePageDTO(tourListDocPage);
+    }
+
 
 }

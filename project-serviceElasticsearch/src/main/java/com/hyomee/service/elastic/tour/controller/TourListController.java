@@ -1,11 +1,8 @@
 package com.hyomee.service.elastic.tour.controller;
 
-import co.elastic.clients.elasticsearch.core.SearchResponse;
 import com.hyomee.core.utils.ResponseUtils;
-import com.hyomee.service.elastic.tour.doc.TourListDoc;
 import com.hyomee.service.elastic.tour.dto.TourListeReqDTO;
 import com.hyomee.service.elastic.tour.service.TourListServie;
-import jakarta.websocket.server.PathParam;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -56,6 +53,16 @@ public class TourListController {
     @GetMapping("/es/updateCount")
     public ResponseEntity updateCount() {
         return ResponseUtils.completed(tourListServie.updateCount());
+    }
+
+    @GetMapping("/es/recommendCountDesc")
+    public ResponseEntity findByOrderByRecommendCountDesc() {
+        return ResponseUtils.completed(tourListServie.findByOrderByRecommendCountDesc());
+    }
+
+    @GetMapping("/es/addCountDesc")
+    public ResponseEntity findByOrderByAddCountDesc() {
+        return ResponseUtils.completed(tourListServie.findByOrderByAddCountDesc());
     }
 
 }
