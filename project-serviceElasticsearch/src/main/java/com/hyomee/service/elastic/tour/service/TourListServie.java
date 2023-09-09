@@ -25,20 +25,24 @@ import java.util.Optional;
 public class TourListServie {
 
     private final TourListDocRepository tourListDocRepository;
+    private final WordSearchService wordSearchService;
 
     public List<TourListEcDTO> getTourListByTitle(String title) {
+        wordSearchService.saveWordSearch(title);
         List<TourListDoc>  tourListDocs = tourListDocRepository.findByTitle(title);
         return  EcMapper.INSTANCE.toTourListEcDTOs(tourListDocs);
 
     }
 
     public ResponsePageDTO getTourListByTitle(String title, Pageable pageable) {
+        wordSearchService.saveWordSearch(title);
         Page<TourListDoc> tourListDocPage = tourListDocRepository.findByTitle(title, pageable);
         return  ResponsePageDTO.setResponsePageDTO(tourListDocPage);
 
     }
 
     public List<TourListEcDTO> getTourListByOverview(String overview) {
+        wordSearchService.saveWordSearch(overview);
         return EcMapper.INSTANCE.toTourListEcDTOs(tourListDocRepository.findByOverview(overview));
     }
 
