@@ -53,4 +53,9 @@ public class TourListController {
         return ResponseUtils.completed(tourListServie.findTourListDocByMatch(tourListeReqDTO));
     }
 
+    @GetMapping("/es/updateCount")
+    public ResponseEntity updateCount() {
+        return ResponseUtils.completed(tourListServie.updateCount());
+    }
+
 }

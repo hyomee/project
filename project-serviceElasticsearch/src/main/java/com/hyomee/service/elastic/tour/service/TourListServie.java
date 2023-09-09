@@ -1,6 +1,7 @@
 package com.hyomee.service.elastic.tour.service;
 
 import co.elastic.clients.elasticsearch.core.SearchResponse;
+import com.hyomee.core.utils.UuidUtils;
 import com.hyomee.es.dto.ResponsePageDTO;
 import com.hyomee.es.dto.SearchResponse.SearchResDTO;
 import com.hyomee.service.elastic.tour.doc.TourListDoc;
@@ -58,6 +59,41 @@ public class TourListServie {
 
     public SearchResDTO findTourListDocByMatch(TourListeReqDTO tourListeReqDTO) {
         return tourListDocRepository.getQueryMatch(tourListeReqDTO, TourListEcDTO.class);
+
+    }
+
+    public boolean updateCount() {
+        updateTourListIdRecommendCount();
+        updateTourListIdAddCount();
+        return true;
+    }
+
+    private void updateTourListIdRecommendCount() {
+        int tourListIdRecommendCount = UuidUtils.getRandom(7306, 1);
+        Optional<TourListDoc> tourListDocOp = tourListDocRepository.findById(String.valueOf(tourListIdRecommendCount));
+
+        if (tourListDocOp.isPresent())  {
+
+            TourListDoc tourListDoc = tourListDocOp.get();
+            log.debug("RecommendCount 이전 : " + tourListDoc.getRecommendCount());
+            tourListDoc.setRecommendCount(tourListDoc.getRecommendCount()+10);
+            log.debug("RecommendCount 이후 : " + tourListDoc.getRecommendCount());
+            tourListDocRepository.save(tourListDoc);
+        }
+
+    }
+
+    private void updateTourListIdAddCount() {
+        int tourListIdRecommendCount = UuidUtils.getRandom(7306, 1);
+        Optional<TourListDoc> tourListDocOp = tourListDocRepository.findById(String.valueOf(tourListIdRecommendCount));
+
+        if (tourListDocOp.isPresent())  {
+            TourListDoc tourListDoc = tourListDocOp.get();
+            log.debug("addCount 이전 : " + tourListDoc.getAddCount());
+            tourListDoc.setAddCount(tourListDoc.getAddCount() + 10);
+            log.debug("addCount 이후 : " + tourListDoc.getAddCount());
+            tourListDocRepository.save(tourListDoc);
+        }
 
     }
 

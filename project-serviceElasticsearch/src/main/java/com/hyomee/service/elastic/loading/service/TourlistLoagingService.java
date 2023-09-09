@@ -10,7 +10,6 @@ import com.hyomee.service.elastic.tour.mapper.EcMapper;
 import com.hyomee.service.elastic.tour.repository.TourListDocRepository;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -38,21 +37,13 @@ public class TourlistLoagingService {
     List<TourListEcDTO> tourlistDTOs =  gson.fromJson(reader,
             new TypeToken<List<TourListEcDTO>>(){}.getType() );
 
-
-
-    for( int i = 0 ; i < tourlistDTOs.size() ; i++) {
-//      if (StringUtils.isEmpty(tourlistEcDTOTmp.getAreacode())) tourlistEcDTOTmp.setAreacode("0");
-//      if (StringUtils.isEmpty(tourlistEcDTOTmp.getBooktour())) tourlistEcDTOTmp.setBooktour("0");
-//      if (StringUtils.isEmpty(tourlistEcDTOTmp.getMlevel())) tourlistEcDTOTmp.setMlevel("0");
-//      tourlistDTOs.get(i).setAreacode(StringUtils.defaultString());
-//      tourlistDTOs.get(i).setBooktour(UuidUtils.getRandom(300,50));
-
-      tourlistDTOs.get(i).setRecommendCount(UuidUtils.getRandom(300,50));
-      tourlistDTOs.get(i).setAddCount(UuidUtils.getRandom(100,20));
-    }
     List<TourListDoc> tourListDocs = EcMapper.INSTANCE.toTourListDOCs(tourlistDTOs);
-    int i = 0;
+    int index = 0;
     for (TourListDoc tourListDoc : tourListDocs) {
+      index = index + 1;
+      tourListDoc.setTourListId(String.valueOf(index));
+      tourListDoc.setRecommendCount(UuidUtils.getRandom(300,50));
+      tourListDoc.setAddCount(UuidUtils.getRandomNext(100,20));
       tourListDOCRepository.save (tourListDoc);
 //      i += 1;
 //      if (i > 10 ) break;
