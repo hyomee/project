@@ -10,3 +10,7 @@
 /logs/
 /project-serviceElasticsearch/build/
 /.idea/
+/jdk/
+/logs/
+/logs/
+/project-serviceElasticsearch/src/main/generated/
