@@ -72,6 +72,7 @@ public class TourlistCustomRespositoryImpl implements TourlistCustomRespository 
                 .from(qTourlistEntity)
                 .where(condition(tourCondition));
 
+
         return PageableExecutionUtils.getPage(tourlistDTOs, pageable, countQuery:: fetchOne );
     }
 

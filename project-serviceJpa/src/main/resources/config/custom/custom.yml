@@ -16,4 +16,4 @@ pageing:
   properties: A,B
 
 mockdir: C:\PRJ\project\mock\
-tourlistDir: C:\PRJ\project\initData\
+tourlistDir: D:\PRJ\project\initData\
