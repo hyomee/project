@@ -20,4 +20,9 @@ public class CaseWhenController {
        return ResponseUtils.completed(caseWhenService.dataLoading());
     }
 
+    @GetMapping("/caseWhenSubQuery")
+    public ResponseEntity caseWhenSubQuery() {
+        return ResponseUtils.completed(caseWhenService.caseWhenSubQuery());
+    }
+
 }

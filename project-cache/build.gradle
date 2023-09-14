@@ -1,0 +1,51 @@
+plugins {
+    id 'java'
+    id 'maven-publish' // maven 사용
+}
+
+group = 'com.hyomee'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+tasks.named("bootJar") {
+//        archiveClassifier = 'boot'
+    mainClass = 'com.hyomee.cache.JpaApplication'
+    manifest {
+        attributes 'Start-Class': 'com.hyomee.cache.JpaApplication'
+    }
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = 'com.hyomee'
+            artifactId 'hyomee-cachelib'
+            version '1.0'
+            from components.java
+        }
+
+        bootJava(MavenPublication) {
+            groupId = 'com.hyomee'
+            artifactId 'hyomee-cacherun'
+            version '1.0'
+            artifact tasks.named("bootJar")
+        }
+    }
+}
+
+
+dependencies {
+    // runtimeOnly 'com.h2database:h2:2.1.214'
+
+    implementation project(':project-core')
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis:3.1.3'
+}
+
+test {
+    useJUnitPlatform()
+}

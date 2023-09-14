@@ -12,5 +12,5 @@
 /.idea/
 /jdk/
 /logs/
-/logs/
+/logs/'
 /project-serviceElasticsearch/src/main/generated/

@@ -2,10 +2,12 @@ package com.hyomee.service.solution.querydsl.casewhen.service;
 
 import com.hyomee.core.utils.DateTimeUtils;
 import com.hyomee.core.utils.UuidUtils;
+import com.hyomee.service.solution.querydsl.casewhen.dto.UnitMDTO;
 import com.hyomee.service.solution.querydsl.casewhen.entity.UnitMEntity;
 import com.hyomee.service.solution.querydsl.casewhen.entity.UnitSvcDtlMEntity;
 import com.hyomee.service.solution.querydsl.casewhen.entity.UnitSvcMEntity;
 import com.hyomee.service.solution.querydsl.casewhen.repository.UnitMEntityRepository;
+import com.hyomee.service.solution.querydsl.casewhen.repository.UnitMEntityRepositoryImpl;
 import com.hyomee.service.solution.querydsl.casewhen.repository.UnitSvcDtlMEntityRepository;
 import com.hyomee.service.solution.querydsl.casewhen.repository.UnitSvcMEntityRepository;
 import jakarta.persistence.Column;
@@ -24,6 +26,8 @@ public class CaseWhenService {
     private final UnitMEntityRepository unitMEntityRepository;
     private final UnitSvcMEntityRepository unitSvcMEntityRepository;
     private final UnitSvcDtlMEntityRepository unitSvcDtlMEntityRepository;
+
+    private final UnitMEntityRepositoryImpl unitMEntityRepositoryImpl;
 
     public String dataLoading()   {
         List<UnitMEntity>  unitMEntityList = new LinkedList<>();
@@ -111,5 +115,11 @@ public class CaseWhenService {
 
         }
         return "OK";
+    }
+
+
+    public UnitMDTO caseWhenSubQuery() {
+
+        return unitMEntityRepositoryImpl.caseWhenSubQuery();
     }
 }

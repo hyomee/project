@@ -11,17 +11,11 @@ spring:
     encoding: UTF-8
   main:
     allow-bean-definition-overriding: true
-  h2:
-    console:
-      enabled: true                     # 콘솔 사용
-      path: /h2-console                 # 콘솔 접근 uri
-      settings.trace: false             # 추적 활성화
-      settings.web-allow-others: false  # CORS로 다른 사용자 접근 허용 여부
   datasource:
     driverClassName: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost:3306/hyomee     # 파일 저장소
+    url: jdbc:mariadb://localhost:3306/hyomeedb     # 파일 저장소
     username: hyomee
-    password: hhs1234!
+    password: sang0237!
     type: com.zaxxer.hikari.HikariDataSource  # 결 풀이 HikariDataSource의 전용 구현을 사용하고 반환하도록 강제
     hikari:                             # DB Connection Pool
       auto-commit: true                 # 자동커밋 여부. (default: true)
