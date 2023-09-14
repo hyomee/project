@@ -3,15 +3,15 @@ package com.hyomee.cache.service;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-@Service
+@Component
 @RequiredArgsConstructor
-public class RedisService {
+public class RedisTemplateComponet {
 
-    // https://bcp0109.tistory.com/328
     private final RedisTemplate redisTemplate;
 
     public String getValues(String key){

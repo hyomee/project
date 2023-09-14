@@ -45,4 +45,7 @@
   <logger name="org.elasticsearch.client=TRACE" appender-ref="console"/>
   <logger name="org.apache.http=TRACE" appender-ref="console"/>
   <logger name="org.springframework.data.elasticsearch.client.WIRE" level="TRACE" appender-ref="console"/>
+  <logger name="redis.clients" level="TRACE" appender-ref="console"/>
+  <logger name="org.springframework.data.redis" level="TRACE" appender-ref="console"/>
 </configuration>
+

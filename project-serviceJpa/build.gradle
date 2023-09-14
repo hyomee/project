@@ -49,6 +49,8 @@ dependencies {
 
 
     implementation project(':project-core')
+    implementation project(':project-cache')
+
     // implementation "com.h2database:h2"
     // implementation "com.h2database:h2:2.1.214"
     //  runtimeOnly 'com.h2database:h2:2.1.214'
