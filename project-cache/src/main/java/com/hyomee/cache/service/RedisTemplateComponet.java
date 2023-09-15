@@ -31,7 +31,4 @@ public class RedisTemplateComponet {
         redisTemplate.opsForSet().add(key,values);
     }
 
-    public Set getSets(String key){
-        return redisTemplate.opsForSet().members(key);
-    }
 }
