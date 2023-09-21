@@ -11,6 +11,7 @@ import com.hyomee.service.solution.querydsl.casewhen.repository.UnitMEntityRepos
 import com.hyomee.service.solution.querydsl.casewhen.repository.UnitSvcDtlMEntityRepository;
 import com.hyomee.service.solution.querydsl.casewhen.repository.UnitSvcMEntityRepository;
 import jakarta.persistence.Column;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -116,7 +117,6 @@ public class CaseWhenService {
         }
         return "OK";
     }
-
 
     public UnitMDTO caseWhenSubQuery() {
 

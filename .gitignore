@@ -14,3 +14,14 @@
 /logs/
 /logs/'
 /project-serviceElasticsearch/src/main/generated/
+/project-serviceElasticsearch/bin/
+/project-serviceWebsocket/bin/
+/project-serviceScheduler/bin/
+/project-serviceJpa/bin/
+/project-scheduler/bin/
+/project-jpa/bin/
+/project-es/bin/
+/project-core/bin/
+/project-cache/bin/
+/bin/
+/.vscode/

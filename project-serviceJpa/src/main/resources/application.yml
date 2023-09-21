@@ -13,9 +13,9 @@ spring:
     allow-bean-definition-overriding: true
   datasource:
     driverClassName: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost:3306/hyomee     # 파일 저장소
+    url: jdbc:mariadb://localhost:3306/hyomeedb     # 파일 저장소
     username: hyomee
-    password: hhs1234!  #sang0237!
+    password: sang0237! # hhs1234!
     type: com.zaxxer.hikari.HikariDataSource  # 결 풀이 HikariDataSource의 전용 구현을 사용하고 반환하도록 강제
     hikari:                             # DB Connection Pool
       auto-commit: true                 # 자동커밋 여부. (default: true)
@@ -51,6 +51,15 @@ spring:
       lettuce:
         pool:
           enabled: true
+  cache:
+    type: redis
+    cache-names:
+      - articleCache,allArticlesCache
+    redis:
+      cache-null-values: false
+      time-to-live: 6000000
+      use-key-prefix: true
+
 
 logging:
   config: classpath:logback-spring.xml
