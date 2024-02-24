@@ -1,0 +1,46 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.hyomee'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+tasks.named("bootJar") {
+//        archiveClassifier = 'boot'
+    mainClass = 'com.hyomee.PatternApplication'
+    manifest {
+        attributes 'Start-Class': 'com.hyomee.PatternApplication'
+    }
+}
+
+publishing {
+    publications {
+
+        bootJava(MavenPublication) {
+            groupId = 'com.hyomee'
+            artifactId 'hyomee-PatternApplication'
+            version '1.0'
+            artifact tasks.named("bootJar")
+        }
+
+//            repositories {
+//                maven {
+//                    url 'https://repo.example.com'
+//                }
+//            }
+    }
+}
+
+dependencies {
+    implementation project(':project-core')
+    testImplementation project('org.springframework.boo:spring-boot-starter-test')
+}
+
+test {
+    useJUnitPlatform()
+}

@@ -15,4 +15,5 @@ include 'project-serviceScheduler'
 include 'project-serviceElasticsearch'
 include 'project-serviceWebsocket'
 include 'project-cache'
+include 'project-pattern'
 

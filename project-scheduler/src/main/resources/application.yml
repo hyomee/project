@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: hyomee
+  profiles:
+    active: local
+  main:
+    allow-bean-definition-overriding: true
+
+
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    root: info
+
+
+
+

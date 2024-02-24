@@ -3,7 +3,7 @@ spring:
     name: hyomee
   config:
     import:
-      - classpath:/config/errTrace.yml
+      - classpath:/config/errorTrace.yml
   messages:
     basename: message/normal,  essage/exception
     encoding: UTF-8

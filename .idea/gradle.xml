@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/project-core" />
             <option value="$PROJECT_DIR$/project-es" />
             <option value="$PROJECT_DIR$/project-jpa" />
+            <option value="$PROJECT_DIR$/project-pattern" />
             <option value="$PROJECT_DIR$/project-scheduler" />
             <option value="$PROJECT_DIR$/project-serviceElasticsearch" />
             <option value="$PROJECT_DIR$/project-serviceJpa" />
