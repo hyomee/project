@@ -12,16 +12,20 @@ import com.querydsl.core.types.Path;
 /**
  * QAuditVO is a Querydsl query type for AuditVO
  */
-@Generated("com.querydsl.codegen.DefaultSupertypeSerializer")
-public class QAuditVO extends EntityPathBase<AuditVO> {
+@Generated("com.querydsl.codegen.DefaultEmbeddableSerializer")
+public class QAuditVO extends BeanPath<AuditVO> {
 
     private static final long serialVersionUID = -752920146L;
 
     public static final QAuditVO auditVO = new QAuditVO("auditVO");
 
-    public final DateTimePath<java.time.LocalDateTime> localDateTime = createDateTime("localDateTime", java.time.LocalDateTime.class);
+    public final DateTimePath<java.time.LocalDateTime> createDateTime = createDateTime("createDateTime", java.time.LocalDateTime.class);
 
-    public final DateTimePath<java.time.LocalDateTime> modifiedDate = createDateTime("modifiedDate", java.time.LocalDateTime.class);
+    public final StringPath createUserid = createString("createUserid");
+
+    public final DateTimePath<java.time.LocalDateTime> updateDataTime = createDateTime("updateDataTime", java.time.LocalDateTime.class);
+
+    public final StringPath updateUserId = createString("updateUserId");
 
     public QAuditVO(String variable) {
         super(AuditVO.class, forVariable(variable));
