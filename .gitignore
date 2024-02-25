@@ -27,3 +27,4 @@
 /.vscode/
 /project-pattern/logs/
 /project-pattern/out/
+/out/production/classes/*.class
