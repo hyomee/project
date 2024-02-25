@@ -38,7 +38,7 @@ publishing {
 
 dependencies {
     implementation project(':project-core')
-    testImplementation project('org.springframework.boo:spring-boot-starter-test')
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 test {

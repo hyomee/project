@@ -25,3 +25,5 @@
 /project-cache/bin/
 /bin/
 /.vscode/
+/project-pattern/logs/
+/project-pattern/out/
