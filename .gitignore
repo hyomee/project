@@ -28,3 +28,7 @@
 /project-pattern/logs/
 /project-pattern/out/
 /out/production/classes/*.class
+/out/
+/project-pattern/build/
+/build/
+/project-serviceWebsocket/build/
