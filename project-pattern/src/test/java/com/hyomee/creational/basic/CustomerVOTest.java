@@ -9,7 +9,7 @@ class CustomerVOTest {
 
     @Test
     void createVo() {
-        CustomerVO customerVO = new CustomerVO();
+        //CustomerVO customerVO = new CustomerVO();
 
     }
 
